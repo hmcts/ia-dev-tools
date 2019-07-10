@@ -1,0 +1,2444 @@
+{
+  "Jurisdiction" : {
+    "headers" : [ {
+      "1" : [ "Jurisdiction", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The identifier which defines the casetype code\nMaxLength: 70", "The short description to describe the jurisdiction used on UI display\nMaxLength: 30", "The long description to describe the jurisdiction.\nMaxLength: 100", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "ID", "Name", "Description", "", "", "", "", "", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2017", "", "IA", "Immigration & Asylum", "Immigration & Asylum", "" ]
+    }, {
+      "5" : [ ]
+    }, {
+      "6" : [ ]
+    }, {
+      "7" : [ ]
+    }, {
+      "8" : [ ]
+    }, {
+      "9" : [ ]
+    }, {
+      "10" : [ ]
+    }, {
+      "11" : [ ]
+    }, {
+      "12" : [ ]
+    }, {
+      "13" : [ ]
+    }, {
+      "14" : [ ]
+    } ]
+  },
+  "CaseField" : {
+    "headers" : [ {
+      "1" : [ "CaseField", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The code of casetype has to be defined in 'CaseType' tab\nMaxLength: 70", "The field ID should match the field attribute name used by the service team in creating the case\nMaxLength: 70", "The lable that will be used on the UI for the case field. It is possible to add Markdown to the label element. This feature allows to provide html styling (limited) and interpolate the value of another case field. See the feature in details on confluence (Label Markdown and interpolation)\nMaxLength:<unlimited>", "The hint text that is present for each field type\nMaxLength: <unlimited>", "The type of field. This can be a CCD Base type (see confluence) or a ComplexType ID as per the ComplexType tab).  \nMaxLength: 70", "Some FieldTypes require or have an optional addition parameter that can be set (e.g. Collection - the parameter is the collecion of What FieldType ?, FixedList the parameter is the ID from the fixedList tab). See confluence for details\nMaxLength: 40", "The regex that can define the type of data accepted in the fields E.g: alphanumeric etc. This will override the regex, if defined internally for any type.\nMaxLength: <unlimited>", "It is a mandatory field which can define if the data classification of the field\nMustBe: <Public, Private, Retricted>", "The minimum that the field Value should support for the FieldType (e.g. for Text its length, for Number it’s a value)\nMaxLength: <unlimited>", "The maximum that the field Value should support for the FieldType (e.g. for Text its length, for Number it’s a value)\nMaxLength: <unlimited>", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "ID", "Label", "HintText", "FieldType", "FieldTypeParameter", "RegularExpression", "SecurityClassification", "Min", "Max", "", "", "", "", "", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "checklistTitle", "# Tell us about your client", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "Asylum", "checklist", " ", "", "checklist", "", "", "PUBLIC", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "Asylum", "homeOfficeDecisionTitle", "# Home Office reference\nLook for the reference number and date on the Home Office decision letter.\n\n![Image of Home Office decision letter](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/home-office-letter.png)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "Asylum", "homeOfficeReferenceNumber", "Home Office reference number", "", "Text", "", "^[A-Za-z][0-9]{6}[0-9]?(|\\/[0-9][0-9]?[0-9]?)$", "PUBLIC", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "Asylum", "homeOfficeDecisionDate", "Date on the decision letter", "", "Date", "", "", "PUBLIC", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "Asylum", "appellantBasicDetailsTitle", "# Basic details\nEnter the basic details for your client.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "Asylum", "appellantTitle", "Title", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "Asylum", "appellantGivenNames", "Given names", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "Asylum", "appellantFamilyName", "Family name", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "Asylum", "appellantDateOfBirth", "Date of birth", "", "Date", "", "", "PUBLIC", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "Asylum", "appellantNationalities", "Appellant nationalities", "", "Collection", "nationality", "", "PUBLIC", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "Asylum", "appellantAddressTitle", "# Your client's address\nWe'll use this to work out which hearing centre is best for them.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "Asylum", "appellantHasFixedAddress", "Does the appellant have a fixed address?", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "17" : [ "01/01/2018", "", "Asylum", "appellantHasFixedAddressLabel", "**We will use the address of your legal practice.**", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "18" : [ "01/01/2018", "", "Asylum", "appellantAddress", "Address", "", "AddressUK", "", "", "PUBLIC", "" ]
+    }, {
+      "19" : [ "01/01/2018", "", "Asylum", "appealTypeTitle", "# What type of decision is your client appealing against?", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "20" : [ "01/01/2018", "", "Asylum", "appealType", "Type of appeal", "", "FixedRadioList", "appealType", "", "PUBLIC", "" ]
+    }, {
+      "21" : [ "01/01/2018", "", "Asylum", "appealGroundsProtectionTitle", "# On which grounds will you build your appeal?\n\nYou'll be able to explain your grounds later.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "22" : [ "01/01/2018", "", "Asylum", "appealGroundsProtection", "Appeal grounds", "", "appealGroundsProtection", "", "", "PUBLIC", "" ]
+    }, {
+      "23" : [ "01/01/2018", "", "Asylum", "appealGroundsHumanRights", "Appeal grounds (Human Rights Act 1998)", "", "appealGroundsHumanRights", "", "", "PUBLIC", "" ]
+    }, {
+      "24" : [ "01/01/2018", "", "Asylum", "appealGroundsRevocationTitle", "# On which grounds will you build your appeal?\n\nYou'll be able to explain your grounds later.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "25" : [ "01/01/2018", "", "Asylum", "appealGroundsRevocation", "Appeal grounds", "", "appealGroundsRevocation", "", "", "PUBLIC", "" ]
+    }, {
+      "26" : [ "01/01/2018", "", "Asylum", "newMattersTitle", "# New matters", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "27" : [ "01/01/2018", "", "Asylum", "hasNewMatters", "Are there any new reasons your client wishes to remain in the UK or any new grounds on which they should be permitted to stay?", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "28" : [ "01/01/2018", "", "Asylum", "newMatters", "Explain what the new matters are and why they are relevant to this appeal.", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "29" : [ "01/01/2018", "", "Asylum", "hasOtherAppealsTitle", "# Has your client appealed against any other UK immigration decisions?", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "30" : [ "01/01/2018", "", "Asylum", "hasOtherAppeals", "Other appeals", "", "FixedList", "otherAppeals", "", "PUBLIC", "" ]
+    }, {
+      "31" : [ "01/01/2018", "", "Asylum", "otherAppealsTitle", "# Has your client appealed against any other UK immigration decisions?", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "32" : [ "01/01/2018", "", "Asylum", "otherAppeals", "Appeal number", "", "Collection", "appealNumber", "", "PUBLIC", "" ]
+    }, {
+      "33" : [ "01/01/2018", "", "Asylum", "legalRepReferenceNumberTitle", "# Your own reference number", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "34" : [ "01/01/2018", "", "Asylum", "legalRepReferenceNumber", "If you prefer to use your own reference number for this case, you can enter it here.", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "35" : [ "01/01/2018", "", "Asylum", "legalRepDeclaration", "Declaration", "", "MultiSelectList", "legalRepDeclaration", "", "PUBLIC", "" ]
+    }, {
+      "36" : [ "01/01/2018", "", "Asylum", "appealReferenceNumber", "Reference number", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "37" : [ "01/01/2018", "", "Asylum", "appellantNameForDisplay", "Appellant name", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "38" : [ "01/01/2018", "", "Asylum", "appealGroundsForDisplay", "Grounds of appeal", "", "MultiSelectList", "appealGrounds", "", "PUBLIC", "" ]
+    }, {
+      "39" : [ "01/01/2018", "", "Asylum", "applicationOutOfTimeText", "## You've missed the deadline for appealing.\n\nYou can ask for permission to appeal outside of the deadline.\n\nExplain why you believe your late appeal should be allowed to proceed.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "40" : [ "01/01/2018", "", "Asylum", "applicationOutOfTimeExplanation", "Reason for late appeal submission", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "41" : [ "01/01/2018", "", "Asylum", "applicationOutOfTimeDocument", "Late submission supporting document", "", "Document", "", "", "PUBLIC", "" ]
+    }, {
+      "42" : [ "01/01/2018", "", "Asylum", "hearingCentre", "Hearing centre", "", "FixedList", "hearingCentre", "", "PUBLIC", "" ]
+    }, {
+      "43" : [ "", "", "", "", "", "" ]
+    }, {
+      "44" : [ "01/01/2018", "", "Asylum", "appealTabTitle", "# Appeal", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "45" : [ "01/01/2018", "", "Asylum", "appealTabResponseTitle", "![]()\n## Home Office response to the appeal argument", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "46" : [ "01/01/2018", "", "Asylum", "appealTabArgumentTitle", "![]()\n## Appeal argument and evidence", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "47" : [ "01/01/2018", "", "Asylum", "spacer", "![]()", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "48" : [ "01/01/2018", "", "Asylum", "documentsTabTitle", "# Documents", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "49" : [ "01/01/2018", "", "Asylum", "additionalEvidenceDocuments", "Additional evidence from appellant", "", "Collection", "documentWithMetadata", "", "PUBLIC", "" ]
+    }, {
+      "50" : [ "01/01/2018", "", "Asylum", "hearingDocuments", "Hearing documents", "", "Collection", "documentWithMetadata", "", "PUBLIC", "" ]
+    }, {
+      "51" : [ "01/01/2018", "", "Asylum", "legalRepresentativeDocuments", "Legal representative documents", "", "Collection", "documentWithMetadata", "", "PUBLIC", "" ]
+    }, {
+      "52" : [ "01/01/2018", "", "Asylum", "respondentDocuments", "Respondent documents", "", "Collection", "documentWithMetadata", "", "PUBLIC", "" ]
+    }, {
+      "53" : [ "01/01/2018", "", "Asylum", "directionsTabTitle", "# Directions", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "54" : [ "01/01/2018", "", "Asylum", "directions", "Directions", "", "Collection", "direction", "", "PUBLIC", "" ]
+    }, {
+      "55" : [ "01/01/2018", "", "Asylum", "editableDirections", "Directions", "", "Collection", "editableDirection", "", "PUBLIC", "" ]
+    }, {
+      "56" : [ "", "", "", "", "", "" ]
+    }, {
+      "57" : [ "01/01/2018", "", "Asylum", "sendDirectionAction", "[Send a new direction](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDirection)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "58" : [ "01/01/2018", "", "Asylum", "sendDirectionExplanation", "Explain the direction you are issuing", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "59" : [ "01/01/2018", "", "Asylum", "sendDirectionParties", "Who are you giving the direction to?", "", "FixedList", "parties", "", "PUBLIC", "" ]
+    }, {
+      "60" : [ "01/01/2018", "", "Asylum", "sendDirectionDateDue", "By what date must they comply?", "", "Date", "", "", "PUBLIC", "" ]
+    }, {
+      "61" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDateAction", "[Change the direction due date](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/changeDirectionDueDate)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "62" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDateTitle", "## Important message\n\nYou must ONLY edit the part of this page labelled 'By what date must they comply?'\n", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "63" : [ "01/01/2018", "", "Asylum", "requestRespondentEvidenceTitle", "You are directing the Home Office to supply their documents and evidence.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "64" : [ "01/01/2018", "", "Asylum", "uploadRespondentEvidenceTitle", "Upload any case documents and evidence supplied by the respondent.\n\n#### Advice on uploads\n- Files must be no more than 100MB in size.\n- Upload a Word doc or PDF file\n- Before uploading a file, give it a meaningful file name. For example, respondent-evidence.pdf.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "65" : [ "01/01/2018", "", "Asylum", "respondentEvidence", "Upload case documents", "", "Collection", "documentWithDescription", "", "PUBLIC", "" ]
+    }, {
+      "66" : [ "01/01/2018", "", "Asylum", "buildCaseTitle", "You must provide all the information for the Home Office to conduct a thorough review of their decision at this stage.\n\n## 1. Download the template below and use it to create your appeal skeleton argument.\n\nLegal_Argument_Template_10_11_18.doc\n\nAdvice: Your appeal skeleton argument must explain why this appeal should be allowed. It must comply with the practice directions.\n\n## 2. Upload your appeal skeleton argument below.\n\n#### Advice on uploads\n- Files must be no more than 100MB in size.\n- Upload a Word doc or PDF file\n- Before uploading a file, give it a meaningful file name. For example, JSmith-Skeleton.pdf.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "67" : [ "01/01/2018", "", "Asylum", "buildCaseEvidenceTitle", "### 3. Upload the evidence upon which you rely, including any witness statements.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "68" : [ "01/01/2018", "", "Asylum", "caseArgumentDocument", "Appeal skeleton argument", "", "Document", "", "", "PUBLIC", "" ]
+    }, {
+      "69" : [ "01/01/2018", "", "Asylum", "caseArgumentDescription", "Description", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "70" : [ "01/01/2018", "", "Asylum", "caseArgumentEvidence", "Evidence", "", "Collection", "documentWithDescription", "", "PUBLIC", "" ]
+    }, {
+      "71" : [ "01/01/2018", "", "Asylum", "requestRespondentReviewTitle", "You are directing the respondent to review and respond to the appeal skeleton argument.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "72" : [ "01/01/2018", "", "Asylum", "addAppealResponseTitle", "Anything you put here will be added to the appeal tab. The legal representative will be notified of the update.\n\n## Upload the appeal response as a document\n\n#### Advice on uploads\n- Files must be no more than 100MB in size.\n- Upload a Word doc or PDF file\n- Before uploading a file, give it a meaningful file name. For example, appeal_response.pdf.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "73" : [ "01/01/2018", "", "Asylum", "appealResponseDocument", "Response document", "", "Document", "", "", "PUBLIC", "" ]
+    }, {
+      "74" : [ "01/01/2018", "", "Asylum", "appealResponseDescription", "Description", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "75" : [ "01/01/2018", "", "Asylum", "appealResponseEvidence", "Evidence", "", "Collection", "documentWithDescription", "", "PUBLIC", "" ]
+    }, {
+      "76" : [ "01/01/2018", "", "Asylum", "uploadAdditionalEvidenceAction", "[Upload additional evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadAdditionalEvidence)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "77" : [ "01/01/2018", "", "Asylum", "additionalEvidenceTitle", "Additional evidence is anything submitted after the appeal skeleton argument.\n\n#### Advice on uploads\n- Files must be no more than 100MB in size.\n- Upload a Word doc or PDF file\n- Before uploading a file, give it a meaningful file name. For example, health-report-JSmith.pdf.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "78" : [ "01/01/2018", "", "Asylum", "additionalEvidence", "Upload documents", "", "Collection", "additionalEvidenceDocument", "", "PUBLIC", "" ]
+    }, {
+      "79" : [ "01/01/2018", "", "Asylum", "listCaseHearingTitle", "Add the hearing details below.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "80" : [ "01/01/2018", "", "Asylum", "listCaseHearingCentre", "Hearing centre", "", "FixedList", "hearingCentre", "", "PUBLIC", "" ]
+    }, {
+      "81" : [ "01/01/2018", "", "Asylum", "listCaseHearingLength", "Length of hearing", "", "FixedList", "hearingLength", "", "PUBLIC", "" ]
+    }, {
+      "82" : [ "01/01/2018", "", "Asylum", "listCaseHearingDate", "Hearing date and time", "", "DateTime", "", "", "PUBLIC", "" ]
+    }, {
+      "83" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsTitle", "The legal representative's hearing requirements are available in the documents tab. If they've made any special requests, tell them whether you're able to give them what they've asked for.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "84" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsVulnerabilities", "If the appellant says they have any personal vulnerabilities, state what these are and whether the tribunal will make any accommodations for them.", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "85" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsMultimedia", "If the appellant asked for any multimedia equipment, state what was requested and whether the tribunal can provide this equipment.", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "86" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsSingleSexCourt", "If the appellant asked for a single sex court, state which gender was requested and whether the tribunal can accommodate this.", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "87" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsInCameraCourt", "If the appellant asked for an in camera court, state whether the tribunal can accommodate this.", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "88" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsOther", "If the appellant made any other requests, state what they asked for and whether the tribunal can accommodate their request.", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "89" : [ "01/01/2018", "", "Asylum", "caseSummaryDocumentTitle", "## Create a case summary and upload it below\n\nUse the case summary template provided to you.\n\nYou must use this template to summarise the most relevant information in the case. This will be used by all parties in the hearing. You do not need to complete all the fields in the template.\n\nGive the file a meaningful name before you upload it. For example, PA-54321-2019-Smith-CaseSummary.PDF\n\n#### Upload your case summary below", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "90" : [ "01/01/2018", "", "Asylum", "caseSummaryDocument", "Case summary document", "", "Document", "", "", "PUBLIC", "" ]
+    }, {
+      "91" : [ "01/01/2018", "", "Asylum", "caseSummaryDescription", "Case summary description", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "92" : [ "01/01/2018", "", "Asylum", "caseIntroductionTitle", "## Write a brief introduction to the case\n\nThis can cover:\n- the appellant's country of origin\n- their date of birth\n- the decision they are appealing against", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "93" : [ "01/01/2018", "", "Asylum", "caseIntroductionDescription", "Introduction", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "94" : [ "01/01/2018", "", "Asylum", "appellantCaseSummaryTitle", "## Add the appellant's case summary\n\nGo to the documents tab and find the appeal skeleton argument for this case. This should contain the case summary written by the appellant's legal representative. You can copy and paste this case summary into the box below.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "95" : [ "01/01/2018", "", "Asylum", "appellantCaseSummaryDescription", "Appellant's case summary", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "96" : [ "01/01/2018", "", "Asylum", "immigrationHistoryAgreement", "Do both parties agree the immigration history?", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "97" : [ "01/01/2018", "", "Asylum", "agreedImmigrationHistoryDescription", "Agreed immigration history", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "98" : [ "01/01/2018", "", "Asylum", "immigrationDisagreementInstructionsLabel", "If the parties do not agree on the immigration history, you must give the respondent's accounts of the immigration history and the areas of disagreement.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "99" : [ "01/01/2018", "", "Asylum", "respondentsImmigrationHistoryDescription", "Give the respondent's account of the immigration history", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "100" : [ "01/01/2018", "", "Asylum", "immigrationHistoryDisagreementDescription", "Give the areas of disagreement in relation to immigration history", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "101" : [ "01/01/2018", "", "Asylum", "scheduleOfIssuesAgreement", "Do both parties agree the schedule of issues?", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "102" : [ "01/01/2018", "", "Asylum", "scheduleOfIssuesAgreementInstructionsLabel", "Go to the documents tab and find the appeal skeleton argument for this case. This should contain the schedule of issues written by the appellant's legal representative. You can copy and paste the schedule of issues into the box below.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "103" : [ "01/01/2018", "", "Asylum", "appellantsAgreedScheduleOfIssuesDescription", "The appellant's schedule of issues", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "104" : [ "01/01/2018", "", "Asylum", "scheduleOfIssuesDisagreementInstructionsLabel", "Any discussion of the schedule of issues is likely to be found in the document tab. You should check the appeal skeleton argument and the Home Office's response and include the relevant information in the boxes below.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "105" : [ "01/01/2018", "", "Asylum", "appellantsDisputedScheduleOfIssuesDescription", "The appellant's schedule of issues as stated in the appeal skeleton argument", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "106" : [ "01/01/2018", "", "Asylum", "scheduleOfIssuesDisagreementDescription", "Areas of disagreement between the parties concerning the appellant's schedule of issues", "", "TextArea", "", "", "PUBLIC", "" ]
+    }, {
+      "107" : [ "01/01/2018", "", "Asylum", "anonymityOrderLabel", "### Are you giving an anonymity direction?", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "108" : [ "01/01/2018", "", "Asylum", "anonymityOrder", "Anonymity direction", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "109" : [ "01/01/2018", "", "Asylum", "legalRepresentativeNamesLabel", "### Give the names of the legal representatives in this case", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "110" : [ "01/01/2018", "", "Asylum", "appellantRepresentative", "Legal representative for the appellant", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "111" : [ "01/01/2018", "", "Asylum", "respondentRepresentative", "Legal representative for the respondent", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "112" : [ "01/01/2018", "", "Asylum", "draftDecisionAndReasonsDocuments", "Decision and reason documents", "", "Collection", "documentWithMetadata", "", "PUBLIC", "" ]
+    }, {
+      "113" : [ "01/01/2018", "", "Asylum", "legalRepresentativeName", "Internal data managed by API", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "114" : [ "01/01/2018", "", "Asylum", "legalRepresentativeEmailAddress", "Internal data managed by API", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "115" : [ "01/01/2018", "", "Asylum", "notificationsSent", "Internal collection managed by API to track notifications sent using GovNotify for this case", "", "Collection", "Text", "", "PUBLIC", "" ]
+    }, {
+      "116" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDateActionAvailable", "Internal flag managed by API to enable/disable changeDirectionDueDateAction (inline action)", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "117" : [ "01/01/2018", "", "Asylum", "sendDirectionActionAvailable", "Internal flag managed by API to enable/disable sendDirectionAction (inline action)", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "118" : [ "01/01/2018", "", "Asylum", "uploadAdditionalEvidenceActionAvailable", "Internal flag managed by API to enable/disable uploadAdditionalEvidenceAction (inline action)", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "119" : [ "01/01/2018", "", "Asylum", "caseBuildingReadyForSubmission", "Internal flag managed by API to show correct case progression within the caseBuilding state", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "120" : [ "01/01/2018", "", "Asylum", "respondentReviewAppealResponseAdded", "Internal flag managed by API to show correct case progression within the respondentReview state", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "121" : [ "01/01/2018", "", "Asylum", "currentCaseStateVisibleToCaseOfficer", "Internal flag managed by API to show correct case state for case officers", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "122" : [ "01/01/2018", "", "Asylum", "currentCaseStateVisibleToLegalRepresentative", "Internal flag managed by API to show correct case state for legal representatives", "", "Text", "", "", "PUBLIC", "" ]
+    }, {
+      "123" : [ "01/01/2018", "", "Asylum", "submissionOutOfTime", "Was the appeal submission late?", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "124" : [ "01/01/2018", "", "Asylum", "caseArgumentAvailable", "Internal flag managed by API to enable/disable case argument in appeal tab", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "125" : [ "01/01/2018", "", "Asylum", "appealResponseAvailable", "Internal flag managed by API to enable/disable appeal response in appeal tab", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "126" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsAvailable", "Internal flag managed by API to enable/disable appeal response in appeal tab", "", "YesOrNo", "", "", "PUBLIC", "" ]
+    }, {
+      "127" : [ "01/01/2018", "", "Asylum", "isDecisionAllowedTitle", "## What is your decision?  \n\nIf the appeal is dismissed on all grounds, select 'Dismissed on all grounds'. If the appeal is allowed on any grounds, you must select 'Allowed'.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "128" : [ "01/01/2018", "", "Asylum", "isDecisionAllowed", "Decision", "", "FixedRadioList", "isDecisionAllowed", "", "PUBLIC", "" ]
+    }, {
+      "129" : [ "01/01/2018", "", "Asylum", "uploadDecisionAndReasonsTitle", "## Upload your decision and reasons  ", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "130" : [ "01/01/2018", "", "Asylum", "finalDecisionAndReasonsDocument", "Decision and reasons", "", "Document", "", "", "PUBLIC", "" ]
+    }, {
+      "131" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsDeclarationLabel", "IMPORTANT:\n- The date of signature must be today's date\n- You can only apply a fee award when you have allowed the appeal", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "132" : [ "01/01/2018", "", "Asylum", "isDocumentSignedToday", "       ", "", "isDocumentSignedToday", "", "", "PUBLIC", "" ]
+    }, {
+      "133" : [ "01/01/2018", "", "Asylum", "isFeeConsistentWithDecision", "       ", "", "isFeeConsistentWithDecision", "", "", "PUBLIC", "" ]
+    }, {
+      "134" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsCoverLetter", "       ", "", "Document", "", "", "PUBLIC", "" ]
+    }, {
+      "135" : [ "01/01/2018", "", "Asylum", "finalDecisionAndReasonsPdf", "       ", "", "Document", "", "", "PUBLIC", "" ]
+    }, {
+      "136" : [ "01/01/2018", "", "Asylum", "finalDecisionAndReasonsDocuments", "Decision and reason documents", "", "Collection", "documentWithMetadata", "", "PUBLIC", "" ]
+    }, {
+      "137" : [ ]
+    }, {
+      "138" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_appealStarted", "# Overview\n\n## Current progress of the case\n\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\n\n## Do this next\nYou still need to submit your appeal.\n\n[Submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\n\nYou can also review and edit your appeal.\n\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "139" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_appealSubmitted", "# Overview\n\n## Current progress of the case\n\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealSubmitted.png)\n\n## Do this next\nYou have submitted your appeal. A case officer will now review your appeal. You don't need to do anything else right now.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "140" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_awaitingRespondentEvidence", "# Overview\n\n## Current progress of the case\n\n![Awaiting respondent evidence](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_awaitingRespondentEvidence.png)\n\n## Do this next\nYou'll get an email when the respondent evidence is available in the documents tab. You can start gathering your evidence now and building your case.\n\n[Build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "141" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_caseBuilding", "# Overview\n\n## Current progress of the case\n\n![Case building](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_caseBuilding.png)\n\n## Do this next\nThe respondent evidence is now available in the documents tab. You now need to build your case.\n\n[Build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "142" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_caseBuilding_readyForSubmission", "# Overview\n\n## Current progress of the case\n\n![Case building](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_caseBuilding.png)\n\n## Do this next\nIf you're ready for your case to be reviewed, [submit your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitCase).\n\nIf you're not yet ready for your case to be reviewed, continue to [build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase).", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "143" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_caseUnderReview", "# Overview\n\n## Current progress of the case\n\n![Case under review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_caseUnderReview.png)\n\n## Do this next\nYour case is now under review. You'll get an email telling you what happens next.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "144" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_respondentReview", "# Overview\n\n## Current progress of the case\n\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_respondentReview.png)\n\n## Do this next\nThe case has now been sent to the respondent for review.\n\nWhen they've reviewed the case, we'll add their response to the documents tab. You'll get an email letting you know when it's there.\n\nIf you want to reply to the response, you should contact the case officer within 5 days. If you don't respond within 5 days, the case will proceed to a hearing.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "145" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_decided", "# Overview\n\n## Current progress of the case\n\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_decided.png)\n\n## Do this next\nIf you haven't already, go to the documents tab to download the decision and reasons document and send it to the Home Office.\n\n[Go to documents](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "146" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_appealSubmitted", "# Overview\n\n## Current progress of the case\n\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\n\n## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "147" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_outOfTime_appealSubmitted", " ![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_outOfTimeBox.png)\n\n# Overview\n\n## Current progress of the case\n\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\n\n## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "148" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_awaitingRespondentEvidence", "# Overview\n\n## Current progress of the case\n\n![Awaiting respondent evidence](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_awaitingRespondentEvidence.png)\n\n## Do this next\nUpload the respondent's evidence as soon as you receive it.\n\n[Upload respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadRespondentEvidence)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "149" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_caseBuilding", "# Overview\n\n## Current progress of the case\n\n![Case building](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseBuilding.png)\n\n## Do this next\nWait for the appellant to submit their built case. If they ask for a time extension, you can respond by changing the due date on the direction.\n\n[Change the direction due date](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/changeDirectionDueDate)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "150" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_caseUnderReview", "# Overview\n\n## Current progress of the case\n\n![Case under review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseUnderReview.png)\n\n## Do this next\n\nThe appellant has submitted their built case. You must now check the case. If it complies with the procedure rules and practice directions, send it to the respondent for their review.\n\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\n\nIf the appellant needs to make any changes, you can direct them to edit the case.\n\n[Request case edit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestCaseEdit)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "151" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_respondentReview", "# Overview\n\n## Current progress of the case\n\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.png)\n\n## Do this next\nUpload the Home Office's appeal response as soon as you receive it.\n\n[Add appeal response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addAppealResponse)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "152" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_respondentReview_appealResponseAvailable", "# Overview\n\n## Current progress of the case\n\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_appealResponseAvailable.png)\n\n## Do this next\nThe legal rep has been instructed to review the Home Office response. If they don't respond within 5 days, the case proceeds to hearing.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "153" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_submitHearingRequirements", "# Overview\n\n## Current progress of the case\n\n![Submit hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\n\n## Do this next\nWait for the appellant to submit their hearing requirements. You don't need to do anything right now.", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "154" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_listing", "# Overview\n\n## Current progress of the case\n\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_listing.png)\n\n## Do this next\nThe appellant has submitted their hearing requirements. You should now list the case.\n\n[List the case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/listCase)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "155" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_prepareForHearing", "# Overview\n\n## Current progress of the case\n\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_prepareForHearing.png)\n\n## Do this next\nYou must create a case summary for the judge to use at the hearing.\n\n[Create case summary](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/createCaseSummary)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "156" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_finalBundling", "# Overview\n\n## Current progress of the case\n\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.png)\n\n## Do this next\nYou must create a hearing bundle for all parties to use in the hearing.\n\n[Generate hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "157" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_preHearing", "# Overview\n\n## Current progress of the case\n\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.png)\n\n## Do this next\nYou can start to create the decision and reasons document.\n\n[Start decision and reasons](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decisionAndReasonsStarted/decisionAndReasonsStartedcaseIntroduction)", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "158" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_pre_doc_gen_decision", "# Overview\n\n## Current progress of the case\n\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.png)\n\n## Do this next\nGenerate the decision and reason document.\n\n[Generate decision and reasons](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateDecisionAndReasons)\n", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "159" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_post_doc_gen_decision", "# Overview\n\n## Current progress of the case\n\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.png)\n\n## Do this next\nIf you haven't already, go to the documents tab to download the decision and reasons document.\n\nOnce you have completed the decision and reasons document, upload and send the completed decision and reasons.\n\n[Send decision and reasons](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDecisionAndReasons)\n", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "160" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_decided", "# Overview\n\n## Current progress of the case\n\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decided.png)\n\n## Do this next\nIf you haven't already, go to the documents tab to download the decision and reasons document and send it to the Home Office.\n\n[Go to documents](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents)\n", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "161" : [ "01/01/2018", "", "Asylum", "caseDetailsTitle", "## Case details", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "162" : [ "01/01/2018", "", "Asylum", "hearingDetailsTitle", "## Hearing details", "", "Label", "", "", "PUBLIC", "" ]
+    }, {
+      "163" : [ ]
+    }, {
+      "164" : [ ]
+    } ]
+  },
+  "CaseType" : {
+    "headers" : [ {
+      "1" : [ "CaseType", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The identifier which defines the casetype code\nMaxLength: 70", "The short description to describe the case type used on the UI.\nMaxLength: 30", "The long description to decribe the case type.\nMaxLength: 100", "The jurisdiction code should match the one defined in 'Jurisdiction' tab\nMaxLength:70", "The absolute URL to the microservice which lists the documents that the services wants to provide for print. \nMaxLength: <unlimited>", "Comma separate timeout (each number is a retry , seconds e.g. 5,10,15 = three retries with increasing timeout time). Max Length: 20", "It is a mandatory field which can define if the data classification of the field\nMustBe: <Public, Private, Retricted>", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "ID", "Name", "Description", "JurisdictionID", "PrintableDocumentsUrl", "RetriesTimeoutURLPrintEvent", "SecurityClassification", "", "", "", "", "", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "IA Asylum Case 0.61", "Asylum Case", "IA", "", "", "PUBLIC", "" ]
+    }, {
+      "5" : [ ]
+    }, {
+      "6" : [ ]
+    }, {
+      "7" : [ ]
+    }, {
+      "8" : [ ]
+    }, {
+      "9" : [ ]
+    }, {
+      "10" : [ ]
+    }, {
+      "11" : [ ]
+    }, {
+      "12" : [ ]
+    }, {
+      "13" : [ ]
+    }, {
+      "14" : [ ]
+    } ]
+  },
+  "AuthorisationCaseField" : {
+    "headers" : [ {
+      "1" : [ "AuthorisationCaseField", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "", "", "", "", "", "", "", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "Must match ID on 'CaseType' tab\nMaxLength: 70", "Must match ID on CaseField tab.\nMaxLength: 40", "Must match ID role.  If a role doesn’t have a Row below that mean no access to.\nMaxLength: 100.", "C - Create, R - Read, U - Update, D - Delete\nMustBe1OrManyOf: <C,R,U,D>", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "CaseFieldID", "UserRole", "CRUD", "", "", "", "", "", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "checklistTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "Asylum", "checklistTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "Asylum", "checklist", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "Asylum", "checklist", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "Asylum", "homeOfficeDecisionTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "Asylum", "homeOfficeDecisionTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "Asylum", "homeOfficeReferenceNumber", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "Asylum", "homeOfficeReferenceNumber", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "Asylum", "homeOfficeDecisionDate", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "Asylum", "homeOfficeDecisionDate", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "Asylum", "appealGroundsProtectionTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "Asylum", "appealGroundsProtectionTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "Asylum", "appealGroundsProtection", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "17" : [ "01/01/2018", "", "Asylum", "appealGroundsProtection", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "18" : [ "01/01/2018", "", "Asylum", "appealGroundsHumanRights", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "19" : [ "01/01/2018", "", "Asylum", "appealGroundsHumanRights", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "20" : [ "01/01/2018", "", "Asylum", "appealGroundsRevocationTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "21" : [ "01/01/2018", "", "Asylum", "appealGroundsRevocationTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "22" : [ "01/01/2018", "", "Asylum", "appealGroundsRevocation", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "23" : [ "01/01/2018", "", "Asylum", "appealGroundsRevocation", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "24" : [ "01/01/2018", "", "Asylum", "appellantBasicDetailsTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "25" : [ "01/01/2018", "", "Asylum", "appellantBasicDetailsTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "26" : [ "01/01/2018", "", "Asylum", "appellantTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "27" : [ "01/01/2018", "", "Asylum", "appellantTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "28" : [ "01/01/2018", "", "Asylum", "appellantGivenNames", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "29" : [ "01/01/2018", "", "Asylum", "appellantGivenNames", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "30" : [ "01/01/2018", "", "Asylum", "appellantFamilyName", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "31" : [ "01/01/2018", "", "Asylum", "appellantFamilyName", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "32" : [ "01/01/2018", "", "Asylum", "appellantDateOfBirth", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "33" : [ "01/01/2018", "", "Asylum", "appellantDateOfBirth", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "34" : [ "01/01/2018", "", "Asylum", "appellantNationalities", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "35" : [ "01/01/2018", "", "Asylum", "appellantNationalities", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "36" : [ "01/01/2018", "", "Asylum", "appellantAddressTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "37" : [ "01/01/2018", "", "Asylum", "appellantAddressTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "38" : [ "01/01/2018", "", "Asylum", "appellantHasFixedAddress", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "39" : [ "01/01/2018", "", "Asylum", "appellantHasFixedAddress", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "40" : [ "01/01/2018", "", "Asylum", "appellantHasFixedAddressLabel", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "41" : [ "01/01/2018", "", "Asylum", "appellantHasFixedAddressLabel", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "42" : [ "01/01/2018", "", "Asylum", "appellantAddress", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "43" : [ "01/01/2018", "", "Asylum", "appellantAddress", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "44" : [ "01/01/2018", "", "Asylum", "appealTypeTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "45" : [ "01/01/2018", "", "Asylum", "appealTypeTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "46" : [ "01/01/2018", "", "Asylum", "appealType", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "47" : [ "01/01/2018", "", "Asylum", "appealType", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "48" : [ "01/01/2018", "", "Asylum", "newMattersTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "49" : [ "01/01/2018", "", "Asylum", "newMattersTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "50" : [ "01/01/2018", "", "Asylum", "hasNewMatters", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "51" : [ "01/01/2018", "", "Asylum", "hasNewMatters", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "52" : [ "01/01/2018", "", "Asylum", "newMatters", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "53" : [ "01/01/2018", "", "Asylum", "newMatters", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "54" : [ "01/01/2018", "", "Asylum", "hasOtherAppealsTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "55" : [ "01/01/2018", "", "Asylum", "hasOtherAppealsTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "56" : [ "01/01/2018", "", "Asylum", "hasOtherAppeals", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "57" : [ "01/01/2018", "", "Asylum", "hasOtherAppeals", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "58" : [ "01/01/2018", "", "Asylum", "otherAppealsTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "59" : [ "01/01/2018", "", "Asylum", "otherAppealsTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "60" : [ "01/01/2018", "", "Asylum", "otherAppeals", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "61" : [ "01/01/2018", "", "Asylum", "otherAppeals", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "62" : [ "01/01/2018", "", "Asylum", "legalRepReferenceNumberTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "63" : [ "01/01/2018", "", "Asylum", "legalRepReferenceNumberTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "64" : [ "01/01/2018", "", "Asylum", "legalRepReferenceNumber", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "65" : [ "01/01/2018", "", "Asylum", "legalRepReferenceNumber", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "66" : [ "01/01/2018", "", "Asylum", "legalRepDeclaration", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "67" : [ "01/01/2018", "", "Asylum", "legalRepDeclaration", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "68" : [ "01/01/2018", "", "Asylum", "appealReferenceNumber", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "69" : [ "01/01/2018", "", "Asylum", "appealReferenceNumber", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "70" : [ "01/01/2018", "", "Asylum", "appealReferenceNumber", "caseworker-ia-system", "R", "" ]
+    }, {
+      "71" : [ "01/01/2018", "", "Asylum", "appellantNameForDisplay", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "72" : [ "01/01/2018", "", "Asylum", "appellantNameForDisplay", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "73" : [ "01/01/2018", "", "Asylum", "appealGroundsForDisplay", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "74" : [ "01/01/2018", "", "Asylum", "appealGroundsForDisplay", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "75" : [ "01/01/2018", "", "Asylum", "hearingCentre", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "76" : [ "01/01/2018", "", "Asylum", "hearingCentre", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "77" : [ "01/01/2018", "", "Asylum", "appealTabTitle", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "78" : [ "01/01/2018", "", "Asylum", "appealTabTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "79" : [ "01/01/2018", "", "Asylum", "appealTabResponseTitle", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "80" : [ "01/01/2018", "", "Asylum", "appealTabResponseTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "81" : [ "01/01/2018", "", "Asylum", "appealTabArgumentTitle", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "82" : [ "01/01/2018", "", "Asylum", "appealTabArgumentTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "83" : [ "01/01/2018", "", "Asylum", "spacer", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "84" : [ "01/01/2018", "", "Asylum", "spacer", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "85" : [ "01/01/2018", "", "Asylum", "documentsTabTitle", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "86" : [ "01/01/2018", "", "Asylum", "documentsTabTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "87" : [ "01/01/2018", "", "Asylum", "additionalEvidenceDocuments", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "88" : [ "01/01/2018", "", "Asylum", "additionalEvidenceDocuments", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "89" : [ "01/01/2018", "", "Asylum", "hearingDocuments", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "90" : [ "01/01/2018", "", "Asylum", "hearingDocuments", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "91" : [ "01/01/2018", "", "Asylum", "legalRepresentativeDocuments", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "92" : [ "01/01/2018", "", "Asylum", "legalRepresentativeDocuments", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "93" : [ "01/01/2018", "", "Asylum", "respondentDocuments", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "94" : [ "01/01/2018", "", "Asylum", "respondentDocuments", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "95" : [ "01/01/2018", "", "Asylum", "directionsTabTitle", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "96" : [ "01/01/2018", "", "Asylum", "directionsTabTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "97" : [ "01/01/2018", "", "Asylum", "directions", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "98" : [ "01/01/2018", "", "Asylum", "directions", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "99" : [ "01/01/2018", "", "Asylum", "editableDirections", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "100" : [ "01/01/2018", "", "Asylum", "sendDirectionAction", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "101" : [ "01/01/2018", "", "Asylum", "sendDirectionExplanation", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "102" : [ "01/01/2018", "", "Asylum", "sendDirectionParties", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "103" : [ "01/01/2018", "", "Asylum", "sendDirectionDateDue", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "104" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDateAction", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "105" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDateTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "106" : [ "01/01/2018", "", "Asylum", "requestRespondentEvidenceTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "107" : [ "01/01/2018", "", "Asylum", "uploadRespondentEvidenceTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "108" : [ "01/01/2018", "", "Asylum", "respondentEvidence", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "109" : [ "01/01/2018", "", "Asylum", "buildCaseTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "110" : [ "01/01/2018", "", "Asylum", "buildCaseTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "111" : [ "01/01/2018", "", "Asylum", "buildCaseEvidenceTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "112" : [ "01/01/2018", "", "Asylum", "buildCaseEvidenceTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "113" : [ "01/01/2018", "", "Asylum", "caseArgumentDocument", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "114" : [ "01/01/2018", "", "Asylum", "caseArgumentDocument", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "115" : [ "01/01/2018", "", "Asylum", "caseArgumentDescription", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "116" : [ "01/01/2018", "", "Asylum", "caseArgumentDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "117" : [ "01/01/2018", "", "Asylum", "caseArgumentEvidence", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "118" : [ "01/01/2018", "", "Asylum", "caseArgumentEvidence", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "119" : [ "01/01/2018", "", "Asylum", "requestRespondentReviewTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "120" : [ "01/01/2018", "", "Asylum", "addAppealResponseTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "121" : [ "01/01/2018", "", "Asylum", "addAppealResponseTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "122" : [ "01/01/2018", "", "Asylum", "appealResponseDocument", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "123" : [ "01/01/2018", "", "Asylum", "appealResponseDocument", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "124" : [ "01/01/2018", "", "Asylum", "appealResponseDescription", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "125" : [ "01/01/2018", "", "Asylum", "appealResponseDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "126" : [ "01/01/2018", "", "Asylum", "appealResponseEvidence", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "127" : [ "01/01/2018", "", "Asylum", "appealResponseEvidence", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "128" : [ "01/01/2018", "", "Asylum", "uploadAdditionalEvidenceAction", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "129" : [ "01/01/2018", "", "Asylum", "uploadAdditionalEvidenceAction", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "130" : [ "01/01/2018", "", "Asylum", "additionalEvidenceTitle", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "131" : [ "01/01/2018", "", "Asylum", "additionalEvidenceTitle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "132" : [ "01/01/2018", "", "Asylum", "additionalEvidence", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "133" : [ "01/01/2018", "", "Asylum", "additionalEvidence", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "134" : [ "01/01/2018", "", "Asylum", "listCaseHearingTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "135" : [ "01/01/2018", "", "Asylum", "listCaseHearingCentre", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "136" : [ "01/01/2018", "", "Asylum", "listCaseHearingCentre", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "137" : [ "01/01/2018", "", "Asylum", "listCaseHearingLength", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "138" : [ "01/01/2018", "", "Asylum", "listCaseHearingLength", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "139" : [ "01/01/2018", "", "Asylum", "listCaseHearingDate", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "140" : [ "01/01/2018", "", "Asylum", "listCaseHearingDate", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "141" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "142" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsVulnerabilities", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "143" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsMultimedia", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "144" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsSingleSexCourt", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "145" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsInCameraCourt", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "146" : [ "01/01/2018", "", "Asylum", "listCaseRequirementsOther", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "147" : [ "01/01/2018", "", "Asylum", "caseSummaryDocumentTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "148" : [ "01/01/2018", "", "Asylum", "caseSummaryDocument", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "149" : [ "01/01/2018", "", "Asylum", "caseSummaryDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "150" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDateActionAvailable", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "151" : [ "01/01/2018", "", "Asylum", "sendDirectionActionAvailable", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "152" : [ "01/01/2018", "", "Asylum", "uploadAdditionalEvidenceActionAvailable", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "153" : [ "01/01/2018", "", "Asylum", "caseBuildingReadyForSubmission", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "154" : [ "01/01/2018", "", "Asylum", "respondentReviewAppealResponseAdded", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "155" : [ "01/01/2018", "", "Asylum", "currentCaseStateVisibleToCaseOfficer", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "156" : [ "01/01/2018", "", "Asylum", "currentCaseStateVisibleToLegalRepresentative", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "157" : [ "01/01/2018", "", "Asylum", "caseArgumentAvailable", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "158" : [ "01/01/2018", "", "Asylum", "caseArgumentAvailable", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "159" : [ "01/01/2018", "", "Asylum", "appealResponseAvailable", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "160" : [ "01/01/2018", "", "Asylum", "appealResponseAvailable", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "161" : [ "01/01/2018", "", "Asylum", "applicationOutOfTimeDocument", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "162" : [ "01/01/2018", "", "Asylum", "applicationOutOfTimeDocument", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "163" : [ "01/01/2018", "", "Asylum", "applicationOutOfTimeExplanation", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "164" : [ "01/01/2018", "", "Asylum", "applicationOutOfTimeExplanation", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "165" : [ "01/01/2018", "", "Asylum", "applicationOutOfTimeText", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "166" : [ "01/01/2018", "", "Asylum", "applicationOutOfTimeText", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "167" : [ "01/01/2018", "", "Asylum", "submissionOutOfTime", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "168" : [ "01/01/2018", "", "Asylum", "submissionOutOfTime", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "169" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsAvailable", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "170" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_appealStarted", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "171" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_appealSubmitted", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "172" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_awaitingRespondentEvidence", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "173" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_caseBuilding", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "174" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_caseBuilding_readyForSubmission", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "175" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_caseUnderReview", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "176" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_respondentReview", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "177" : [ "01/01/2018", "", "Asylum", "progress_legalRepresentative_decided", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "178" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_appealSubmitted", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "179" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_outOfTime_appealSubmitted", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "180" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_awaitingRespondentEvidence", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "181" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_caseBuilding", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "182" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_caseUnderReview", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "183" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_respondentReview", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "184" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_respondentReview_appealResponseAvailable", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "185" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_submitHearingRequirements", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "186" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_listing", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "187" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_prepareForHearing", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "188" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_finalBundling", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "189" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_preHearing", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "190" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_pre_doc_gen_decision", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "191" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_post_doc_gen_decision", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "192" : [ "01/01/2018", "", "Asylum", "progress_caseOfficer_decided", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "193" : [ "01/01/2018", "", "Asylum", "caseDetailsTitle", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "194" : [ "01/01/2018", "", "Asylum", "caseDetailsTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "195" : [ "01/01/2018", "", "Asylum", "hearingDetailsTitle", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "196" : [ "01/01/2018", "", "Asylum", "hearingDetailsTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "197" : [ "01/01/2018", "", "Asylum", "caseIntroductionTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "198" : [ "01/01/2018", "", "Asylum", "caseIntroductionDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "199" : [ "01/01/2018", "", "Asylum", "appellantCaseSummaryTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "200" : [ "01/01/2018", "", "Asylum", "appellantCaseSummaryDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "201" : [ "01/01/2018", "", "Asylum", "immigrationHistoryAgreement", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "202" : [ "01/01/2018", "", "Asylum", "agreedImmigrationHistoryDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "203" : [ "01/01/2018", "", "Asylum", "immigrationDisagreementInstructionsLabel", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "204" : [ "01/01/2018", "", "Asylum", "respondentsImmigrationHistoryDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "205" : [ "01/01/2018", "", "Asylum", "immigrationHistoryDisagreementDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "206" : [ "01/01/2018", "", "Asylum", "scheduleOfIssuesAgreement", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "207" : [ "01/01/2018", "", "Asylum", "scheduleOfIssuesAgreementInstructionsLabel", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "208" : [ "01/01/2018", "", "Asylum", "appellantsAgreedScheduleOfIssuesDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "209" : [ "01/01/2018", "", "Asylum", "scheduleOfIssuesDisagreementInstructionsLabel", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "210" : [ "01/01/2018", "", "Asylum", "appellantsDisputedScheduleOfIssuesDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "211" : [ "01/01/2018", "", "Asylum", "scheduleOfIssuesDisagreementDescription", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "212" : [ "01/01/2018", "", "Asylum", "anonymityOrderLabel", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "213" : [ "01/01/2018", "", "Asylum", "anonymityOrder", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "214" : [ "01/01/2018", "", "Asylum", "legalRepresentativeNamesLabel", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "215" : [ "01/01/2018", "", "Asylum", "appellantRepresentative", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "216" : [ "01/01/2018", "", "Asylum", "respondentRepresentative", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "217" : [ "01/01/2018", "", "Asylum", "draftDecisionAndReasonsDocuments", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "218" : [ "01/01/2018", "", "Asylum", "finalDecisionAndReasonsDocuments", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "219" : [ "01/01/2018", "", "Asylum", "finalDecisionAndReasonsDocuments", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "220" : [ "01/01/2018", "", "Asylum", "isDecisionAllowedTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "221" : [ "01/01/2018", "", "Asylum", "isDecisionAllowed", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "222" : [ "01/01/2018", "", "Asylum", "uploadDecisionAndReasonsTitle", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "223" : [ "01/01/2018", "", "Asylum", "finalDecisionAndReasonsDocument", "caseworker-ia-system", "CRUD", "" ]
+    }, {
+      "224" : [ "01/01/2018", "", "Asylum", "finalDecisionAndReasonsDocument", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "225" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsCoverLetter", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "226" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsDeclarationLabel", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "227" : [ "01/01/2018", "", "Asylum", "isDocumentSignedToday", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "228" : [ "01/01/2018", "", "Asylum", "isFeeConsistentWithDecision", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "229" : [ "01/01/2018", "", "Asylum", "finalDecisionAndReasonsPdf", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "230" : [ "", "", "", "", "" ]
+    } ]
+  },
+  "AuthorisationComplexType" : {
+    "headers" : [ {
+      "1" : [ "AuthorisationComplexType", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "", "", "Must match ID on 'CaseType' tab\nMaxLength: 70", "The Field ID should match an ID in the CaseField Tab\nMaxLength: 70", "The complex type element (field) ID (ListElementId) should match the field attribute name used by the service team in creating the case\nMaxLength: 70", "Must match ID role.  If a role doesn’t have a Row below that mean no access to.\nMaxLength: 100.", "C - Create, R - Read, U - Update, D - Delete\nMustBe1OrManyOf: <C,R,U,D> MaxLength: 5", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "CaseFieldID", "ListElementCode", "UserRole", "CRUD", "" ]
+    } ],
+    "rows" : [ ]
+  },
+  "ComplexTypes" : {
+    "headers" : [ {
+      "1" : [ "ComplexTypes", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The ComplexType ID should match the field attribute name on the CaseField Tab\nMaxLength: 70", "The complex type element (field) ID (ListElementId) should match the field attribute name used by the service team in creating the case\nMaxLength: 70", "The type of field. This can be a CCD Base type (see confluence) or a ComplexType ID as per the ComplexType tab).  \nMaxLength: 70", "Some FieldTypes require or have an optional addition parameter that can be set (e.g. Collection - the parameter is the collecion of What FieldType ?, FixedList the parameter is the ID from the fixedList tab). See confluence for details\nMaxLength: 40", "The lable that will be used on the UI for the case field. It is possible to add Markdown to the label element. This feature allows to provide html styling (limited) and interpolate the value of another case field. See the feature in details on confluence (Label Markdown and interpolation)\nMaxLength:200", "Within a complex type any field can be hidden or shown based on another field's values in the same level.\nCurrently only single boolean or string conditions are supported. Eg: country=\"Italy\" or country startWith: \"Uni\"\nMaxLength: 1000", "The regex that can define the type of data accepted in the fields E.g: alphanumeric etc. This will override the regex, if defined internally for any type.\nMaxLength: <unlimited>", "The hint text that is present for each field type\nMaxLength: <unlmited>", "It is a mandatory field which can define if the data classification of the field\nMustBe: <Public, Private, Retricted>", "The minimum that the field Value should support for the FieldType (e.g. for Text its length, for Number it’s a value)\nMaxLength: <unlimited>", "The maximum that the field Value should support for the FieldType (e.g. for Text its length, for Number it’s a value)\nMaxLength: <unlimited>", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "ID", "ListElementCode", "FieldType", "FieldTypeParameter", "ElementLabel", "FieldShowCondition", "RegularExpression", "HintText", "SecurityClassification", "Min", "Max", "", "", "", "", "", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "appealNumber", "value", "Text", "", " ", "", "^((?i)RP|PA|EA|HU|DC|DA|AA|IA|OA|VA)\\/[0-9]{5}\\/[0-9]{4}$", "", "PUBLIC", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "appealGroundsProtection", "values", "MultiSelectList", "appealGroundsProtection", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "appealGroundsHumanRights", "values", "MultiSelectList", "appealGroundsHumanRights", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "appealGroundsRevocation", "values", "MultiSelectList", "appealGroundsRevocation", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "checklist", "checklist1", "MultiSelectList", "checklist1", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "checklist", "checklist2", "MultiSelectList", "checklist2", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "checklist", "checklist3", "MultiSelectList", "checklist3", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "checklist", "checklist4", "MultiSelectList", "checklist4", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "checklist", "checklist5", "MultiSelectList", "checklist5", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "checklist", "checklist6", "MultiSelectList", "checklist6", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "direction", "explanation", "TextArea", "", "Explanation", "", "", "", "PUBLIC", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "direction", "parties", "FixedList", "parties", "Parties", "", "", "", "PUBLIC", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "direction", "dateDue", "Date", "", "Date due", "", "", "", "PUBLIC", "" ]
+    }, {
+      "17" : [ "01/01/2018", "", "direction", "dateSent", "Date", "", "Date sent", "", "", "", "PUBLIC", "" ]
+    }, {
+      "18" : [ "01/01/2018", "", "direction", "tag", "Text", "", "Tag", "tag=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "", "", "PUBLIC", "" ]
+    }, {
+      "19" : [ "01/01/2018", "", "editableDirection", "explanation", "TextArea", "", "Explanation", "", "", "", "PUBLIC", "" ]
+    }, {
+      "20" : [ "01/01/2018", "", "editableDirection", "parties", "FixedList", "parties", "Parties", "", "", "", "PUBLIC", "" ]
+    }, {
+      "21" : [ "01/01/2018", "", "editableDirection", "dateDue", "Date", "", "By what date must they comply?", "", "", "", "PUBLIC", "" ]
+    }, {
+      "22" : [ "01/01/2018", "", "documentWithDescription", "document", "Document", "", "Document", "", "", "", "PUBLIC", "" ]
+    }, {
+      "23" : [ "01/01/2018", "", "documentWithDescription", "description", "TextArea", "", "Describe the document", "", "", "", "PUBLIC", "" ]
+    }, {
+      "24" : [ "01/01/2018", "", "documentWithMetadata", "document", "Document", "", "Document", "", "", "", "PUBLIC", "" ]
+    }, {
+      "25" : [ "01/01/2018", "", "documentWithMetadata", "description", "TextArea", "", "Description", "", "", "", "PUBLIC", "" ]
+    }, {
+      "26" : [ "01/01/2018", "", "documentWithMetadata", "dateUploaded", "Date", "", "Date uploaded", "", "", "", "PUBLIC", "" ]
+    }, {
+      "27" : [ "01/01/2018", "", "documentWithMetadata", "tag", "Text", "", "Tag", "tag=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "", "", "PUBLIC", "" ]
+    }, {
+      "28" : [ "01/01/2018", "", "nationality", "code", "FixedList", "isoCountries", "Nationality", "", "", "", "PUBLIC", "" ]
+    }, {
+      "29" : [ "01/01/2018", "", "additionalEvidenceDocument", "document", "Document", "", "Document", "", "", "", "PUBLIC", "" ]
+    }, {
+      "30" : [ "01/01/2018", "", "additionalEvidenceDocument", "description", "TextArea", "", "Explain why you are submitting this evidence after the appeal skeleton argument.", "", "", "", "PUBLIC", "" ]
+    }, {
+      "31" : [ "01/01/2018", "", "isDocumentSignedToday", "values", "MultiSelectList", "isDocumentSignedToday", " ", "", "", "", "PUBLIC", "" ]
+    }, {
+      "32" : [ "01/01/2018", "", "isFeeConsistentWithDecision", "values", "MultiSelectList", "isFeeConsistentWithDecision", " ", "", "", "", "PUBLIC", "" ]
+    } ]
+  },
+  "FixedLists" : {
+    "headers" : [ {
+      "1" : [ "FixedLists", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The unique identifier of the Fixed list\nMaxLength: 40", "The unque ID of an element in the list (ID)\nMaxLength: 40", "The Display name for the list item\nMaxLength: 250", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "ID", "ListElementCode", "ListElement", "", "", "", "", "", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "appealGrounds", "protectionRefugeeConvention", "Removing the appellant from the UK would breach the UK's obligation under the Refugee Convention", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "appealGrounds", "protectionHumanitarianProtection", "Removing the appellant from the UK would breach the UK's obligation in relation to persons eligible for a grant of humanitarian protection", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "appealGrounds", "protectionHumanRights", "Removing the appellant from the UK would be unlawful under section 6 of the Human Rights Act 1998", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "appealGrounds", "revocationRefugeeConvention", "Revocation of the appellant's protection status breaches the United Kingdom's obligations under the Refugee Convention", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "appealGrounds", "revocationHumanitarianProtection", "Revocation of the appellant's protection status breaches the United Kingdom's obligations in relation to persons eligible for humanitarian protection", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "appealGroundsProtection", "protectionRefugeeConvention", "Removing the appellant from the UK would breach the UK's obligation under the Refugee Convention", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "appealGroundsProtection", "protectionHumanitarianProtection", "Removing the appellant from the UK would breach the UK's obligation in relation to persons eligible for a grant of humanitarian protection", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "appealGroundsHumanRights", "protectionHumanRights", "Removing the appellant from the UK would be unlawful under section 6 of the Human Rights Act 1998", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "appealGroundsRevocation", "revocationRefugeeConvention", "Revocation of the appellant's protection status breaches the United Kingdom's obligations under the Refugee Convention", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "appealGroundsRevocation", "revocationHumanitarianProtection", "Revocation of the appellant's protection status breaches the United Kingdom's obligations in relation to persons eligible for humanitarian protection", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "appealType", "protection", "The refusal of a protection claim", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "appealType", "revocationOfProtection", "The revocation of a protection status", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "checklist1", "isAdult", "My client is at least 18 years old", "" ]
+    }, {
+      "17" : [ "01/01/2018", "", "checklist2", "isNotDetained", "My client is not currently in detention", "" ]
+    }, {
+      "18" : [ "01/01/2018", "", "checklist3", "isNotFamilyAppeal", "My client isn't appealing with other people as part of a linked appeal", "" ]
+    }, {
+      "19" : [ "01/01/2018", "", "checklist4", "isWithinPostcode", "My client is located in one of these postcodes: BN, CB, CM, HP, IP, ME, N, NR, RH, SE, TN, W, L, LA, M, OL, PR, SK, WA, WN", "" ]
+    }, {
+      "20" : [ "01/01/2018", "", "checklist5", "isResidingInUK", "My client is presently in the UK", "" ]
+    }, {
+      "21" : [ "01/01/2018", "", "checklist6", "isNotStateless", "My client is not stateless", "" ]
+    }, {
+      "22" : [ "01/01/2018", "", "directionStatus", "outstanding", "Outstanding", "" ]
+    }, {
+      "23" : [ "01/01/2018", "", "directionStatus", "completed", "Completed", "" ]
+    }, {
+      "24" : [ "01/01/2018", "", "hearingCentre", "manchester", "Manchester", "" ]
+    }, {
+      "25" : [ "01/01/2018", "", "hearingCentre", "taylorHouse", "Taylor House", "" ]
+    }, {
+      "26" : [ "01/01/2018", "", "hearingLength", "30", "30 minutes", "" ]
+    }, {
+      "27" : [ "01/01/2018", "", "hearingLength", "60", "1 hour", "" ]
+    }, {
+      "28" : [ "01/01/2018", "", "hearingLength", "90", "1 hour 30 minutes", "" ]
+    }, {
+      "29" : [ "01/01/2018", "", "hearingLength", "120", "2 hours", "" ]
+    }, {
+      "30" : [ "01/01/2018", "", "hearingLength", "150", "2 hours 30 minutes", "" ]
+    }, {
+      "31" : [ "01/01/2018", "", "hearingLength", "180", "3 hours", "" ]
+    }, {
+      "32" : [ "01/01/2018", "", "hearingLength", "210", "3 hours 30 minutes", "" ]
+    }, {
+      "33" : [ "01/01/2018", "", "hearingLength", "240", "4 hours", "" ]
+    }, {
+      "34" : [ "01/01/2018", "", "hearingLength", "270", "4 hours 30 minutes", "" ]
+    }, {
+      "35" : [ "01/01/2018", "", "hearingLength", "300", "5 hours", "" ]
+    }, {
+      "36" : [ "01/01/2018", "", "hearingLength", "330", "5 hours 30 minutes", "" ]
+    }, {
+      "37" : [ "01/01/2018", "", "hearingLength", "360", "6 hours", "" ]
+    }, {
+      "38" : [ "01/01/2018", "", "legalRepDeclaration", "hasDeclared", "I the representative am giving notice of appeal in accordance with the appellant's instructions and the appellant has confirmed to me they believe that the facts stated in this appeal form are true.", "" ]
+    }, {
+      "39" : [ "01/01/2018", "", "isoCountries", "AF", "Afghanistan", "" ]
+    }, {
+      "40" : [ "01/01/2018", "", "isoCountries", "AX", "Aland Islands", "" ]
+    }, {
+      "41" : [ "01/01/2018", "", "isoCountries", "AL", "Albania", "" ]
+    }, {
+      "42" : [ "01/01/2018", "", "isoCountries", "DZ", "Algeria", "" ]
+    }, {
+      "43" : [ "01/01/2018", "", "isoCountries", "AS", "American Samoa", "" ]
+    }, {
+      "44" : [ "01/01/2018", "", "isoCountries", "AD", "Andorra", "" ]
+    }, {
+      "45" : [ "01/01/2018", "", "isoCountries", "AO", "Angola", "" ]
+    }, {
+      "46" : [ "01/01/2018", "", "isoCountries", "AI", "Anguilla", "" ]
+    }, {
+      "47" : [ "01/01/2018", "", "isoCountries", "AQ", "Antarctica", "" ]
+    }, {
+      "48" : [ "01/01/2018", "", "isoCountries", "AG", "Antigua and Barbuda", "" ]
+    }, {
+      "49" : [ "01/01/2018", "", "isoCountries", "AR", "Argentina", "" ]
+    }, {
+      "50" : [ "01/01/2018", "", "isoCountries", "AM", "Armenia", "" ]
+    }, {
+      "51" : [ "01/01/2018", "", "isoCountries", "AW", "Aruba", "" ]
+    }, {
+      "52" : [ "01/01/2018", "", "isoCountries", "AU", "Australia", "" ]
+    }, {
+      "53" : [ "01/01/2018", "", "isoCountries", "AT", "Austria", "" ]
+    }, {
+      "54" : [ "01/01/2018", "", "isoCountries", "AZ", "Azerbaijan", "" ]
+    }, {
+      "55" : [ "01/01/2018", "", "isoCountries", "BS", "Bahamas", "" ]
+    }, {
+      "56" : [ "01/01/2018", "", "isoCountries", "BH", "Bahrain", "" ]
+    }, {
+      "57" : [ "01/01/2018", "", "isoCountries", "BD", "Bangladesh", "" ]
+    }, {
+      "58" : [ "01/01/2018", "", "isoCountries", "BB", "Barbados", "" ]
+    }, {
+      "59" : [ "01/01/2018", "", "isoCountries", "BY", "Belarus", "" ]
+    }, {
+      "60" : [ "01/01/2018", "", "isoCountries", "BE", "Belgium", "" ]
+    }, {
+      "61" : [ "01/01/2018", "", "isoCountries", "BZ", "Belize", "" ]
+    }, {
+      "62" : [ "01/01/2018", "", "isoCountries", "BJ", "Benin", "" ]
+    }, {
+      "63" : [ "01/01/2018", "", "isoCountries", "BM", "Bermuda", "" ]
+    }, {
+      "64" : [ "01/01/2018", "", "isoCountries", "BT", "Bhutan", "" ]
+    }, {
+      "65" : [ "01/01/2018", "", "isoCountries", "BO", "Bolivia", "" ]
+    }, {
+      "66" : [ "01/01/2018", "", "isoCountries", "BQ", "Bonaire, Sint Eustatius and Saba", "" ]
+    }, {
+      "67" : [ "01/01/2018", "", "isoCountries", "BA", "Bosnia and Herzegovina", "" ]
+    }, {
+      "68" : [ "01/01/2018", "", "isoCountries", "BW", "Botswana", "" ]
+    }, {
+      "69" : [ "01/01/2018", "", "isoCountries", "BV", "Bouvet Island", "" ]
+    }, {
+      "70" : [ "01/01/2018", "", "isoCountries", "BR", "Brazil", "" ]
+    }, {
+      "71" : [ "01/01/2018", "", "isoCountries", "VG", "British Virgin Islands", "" ]
+    }, {
+      "72" : [ "01/01/2018", "", "isoCountries", "IO", "British Indian Ocean Territory", "" ]
+    }, {
+      "73" : [ "01/01/2018", "", "isoCountries", "BN", "Brunei Darussalam", "" ]
+    }, {
+      "74" : [ "01/01/2018", "", "isoCountries", "BG", "Bulgaria", "" ]
+    }, {
+      "75" : [ "01/01/2018", "", "isoCountries", "BF", "Burkina Faso", "" ]
+    }, {
+      "76" : [ "01/01/2018", "", "isoCountries", "BI", "Burundi", "" ]
+    }, {
+      "77" : [ "01/01/2018", "", "isoCountries", "KH", "Cambodia", "" ]
+    }, {
+      "78" : [ "01/01/2018", "", "isoCountries", "CM", "Cameroon", "" ]
+    }, {
+      "79" : [ "01/01/2018", "", "isoCountries", "CA", "Canada", "" ]
+    }, {
+      "80" : [ "01/01/2018", "", "isoCountries", "CV", "Cape Verde", "" ]
+    }, {
+      "81" : [ "01/01/2018", "", "isoCountries", "KY", "Cayman Islands", "" ]
+    }, {
+      "82" : [ "01/01/2018", "", "isoCountries", "CF", "Central African Republic", "" ]
+    }, {
+      "83" : [ "01/01/2018", "", "isoCountries", "TD", "Chad", "" ]
+    }, {
+      "84" : [ "01/01/2018", "", "isoCountries", "CL", "Chile", "" ]
+    }, {
+      "85" : [ "01/01/2018", "", "isoCountries", "CN", "China", "" ]
+    }, {
+      "86" : [ "01/01/2018", "", "isoCountries", "HK", "Hong Kong, Special Administrative Region of China", "" ]
+    }, {
+      "87" : [ "01/01/2018", "", "isoCountries", "MO", "Macao, Special Administrative Region of China", "" ]
+    }, {
+      "88" : [ "01/01/2018", "", "isoCountries", "CX", "Christmas Island", "" ]
+    }, {
+      "89" : [ "01/01/2018", "", "isoCountries", "CC", "Cocos (Keeling) Islands", "" ]
+    }, {
+      "90" : [ "01/01/2018", "", "isoCountries", "CO", "Colombia", "" ]
+    }, {
+      "91" : [ "01/01/2018", "", "isoCountries", "KM", "Comoros", "" ]
+    }, {
+      "92" : [ "01/01/2018", "", "isoCountries", "CG", "Congo (Brazzaville)", "" ]
+    }, {
+      "93" : [ "01/01/2018", "", "isoCountries", "CD", "Congo, Democratic Republic of the", "" ]
+    }, {
+      "94" : [ "01/01/2018", "", "isoCountries", "CK", "Cook Islands", "" ]
+    }, {
+      "95" : [ "01/01/2018", "", "isoCountries", "CR", "Costa Rica", "" ]
+    }, {
+      "96" : [ "01/01/2018", "", "isoCountries", "CI", "Côte d'Ivoire", "" ]
+    }, {
+      "97" : [ "01/01/2018", "", "isoCountries", "HR", "Croatia", "" ]
+    }, {
+      "98" : [ "01/01/2018", "", "isoCountries", "CU", "Cuba", "" ]
+    }, {
+      "99" : [ "01/01/2018", "", "isoCountries", "CW", "Curaçao", "" ]
+    }, {
+      "100" : [ "01/01/2018", "", "isoCountries", "CY", "Cyprus", "" ]
+    }, {
+      "101" : [ "01/01/2018", "", "isoCountries", "CZ", "Czech Republic", "" ]
+    }, {
+      "102" : [ "01/01/2018", "", "isoCountries", "DK", "Denmark", "" ]
+    }, {
+      "103" : [ "01/01/2018", "", "isoCountries", "DJ", "Djibouti", "" ]
+    }, {
+      "104" : [ "01/01/2018", "", "isoCountries", "DM", "Dominica", "" ]
+    }, {
+      "105" : [ "01/01/2018", "", "isoCountries", "DO", "Dominican Republic", "" ]
+    }, {
+      "106" : [ "01/01/2018", "", "isoCountries", "EC", "Ecuador", "" ]
+    }, {
+      "107" : [ "01/01/2018", "", "isoCountries", "EG", "Egypt", "" ]
+    }, {
+      "108" : [ "01/01/2018", "", "isoCountries", "SV", "El Salvador", "" ]
+    }, {
+      "109" : [ "01/01/2018", "", "isoCountries", "GQ", "Equatorial Guinea", "" ]
+    }, {
+      "110" : [ "01/01/2018", "", "isoCountries", "ER", "Eritrea", "" ]
+    }, {
+      "111" : [ "01/01/2018", "", "isoCountries", "EE", "Estonia", "" ]
+    }, {
+      "112" : [ "01/01/2018", "", "isoCountries", "ET", "Ethiopia", "" ]
+    }, {
+      "113" : [ "01/01/2018", "", "isoCountries", "FK", "Falkland Islands (Malvinas)", "" ]
+    }, {
+      "114" : [ "01/01/2018", "", "isoCountries", "FO", "Faroe Islands", "" ]
+    }, {
+      "115" : [ "01/01/2018", "", "isoCountries", "FJ", "Fiji", "" ]
+    }, {
+      "116" : [ "01/01/2018", "", "isoCountries", "FI", "Finland", "" ]
+    }, {
+      "117" : [ "01/01/2018", "", "isoCountries", "FR", "France", "" ]
+    }, {
+      "118" : [ "01/01/2018", "", "isoCountries", "GF", "French Guiana", "" ]
+    }, {
+      "119" : [ "01/01/2018", "", "isoCountries", "PF", "French Polynesia", "" ]
+    }, {
+      "120" : [ "01/01/2018", "", "isoCountries", "TF", "French Southern Territories", "" ]
+    }, {
+      "121" : [ "01/01/2018", "", "isoCountries", "GA", "Gabon", "" ]
+    }, {
+      "122" : [ "01/01/2018", "", "isoCountries", "GM", "Gambia", "" ]
+    }, {
+      "123" : [ "01/01/2018", "", "isoCountries", "GE", "Georgia", "" ]
+    }, {
+      "124" : [ "01/01/2018", "", "isoCountries", "DE", "Germany", "" ]
+    }, {
+      "125" : [ "01/01/2018", "", "isoCountries", "GH", "Ghana", "" ]
+    }, {
+      "126" : [ "01/01/2018", "", "isoCountries", "GI", "Gibraltar", "" ]
+    }, {
+      "127" : [ "01/01/2018", "", "isoCountries", "GR", "Greece", "" ]
+    }, {
+      "128" : [ "01/01/2018", "", "isoCountries", "GL", "Greenland", "" ]
+    }, {
+      "129" : [ "01/01/2018", "", "isoCountries", "GD", "Grenada", "" ]
+    }, {
+      "130" : [ "01/01/2018", "", "isoCountries", "GP", "Guadeloupe", "" ]
+    }, {
+      "131" : [ "01/01/2018", "", "isoCountries", "GU", "Guam", "" ]
+    }, {
+      "132" : [ "01/01/2018", "", "isoCountries", "GT", "Guatemala", "" ]
+    }, {
+      "133" : [ "01/01/2018", "", "isoCountries", "GG", "Guernsey", "" ]
+    }, {
+      "134" : [ "01/01/2018", "", "isoCountries", "GN", "Guinea", "" ]
+    }, {
+      "135" : [ "01/01/2018", "", "isoCountries", "GW", "Guinea-Bissau", "" ]
+    }, {
+      "136" : [ "01/01/2018", "", "isoCountries", "GY", "Guyana", "" ]
+    }, {
+      "137" : [ "01/01/2018", "", "isoCountries", "HT", "Haiti", "" ]
+    }, {
+      "138" : [ "01/01/2018", "", "isoCountries", "HM", "Heard Island and Mcdonald Islands", "" ]
+    }, {
+      "139" : [ "01/01/2018", "", "isoCountries", "VA", "Holy See (Vatican City State)", "" ]
+    }, {
+      "140" : [ "01/01/2018", "", "isoCountries", "HN", "Honduras", "" ]
+    }, {
+      "141" : [ "01/01/2018", "", "isoCountries", "HU", "Hungary", "" ]
+    }, {
+      "142" : [ "01/01/2018", "", "isoCountries", "IS", "Iceland", "" ]
+    }, {
+      "143" : [ "01/01/2018", "", "isoCountries", "IN", "India", "" ]
+    }, {
+      "144" : [ "01/01/2018", "", "isoCountries", "ID", "Indonesia", "" ]
+    }, {
+      "145" : [ "01/01/2018", "", "isoCountries", "IR", "Iran, Islamic Republic of", "" ]
+    }, {
+      "146" : [ "01/01/2018", "", "isoCountries", "IQ", "Iraq", "" ]
+    }, {
+      "147" : [ "01/01/2018", "", "isoCountries", "IE", "Ireland", "" ]
+    }, {
+      "148" : [ "01/01/2018", "", "isoCountries", "IM", "Isle of Man", "" ]
+    }, {
+      "149" : [ "01/01/2018", "", "isoCountries", "IL", "Israel", "" ]
+    }, {
+      "150" : [ "01/01/2018", "", "isoCountries", "IT", "Italy", "" ]
+    }, {
+      "151" : [ "01/01/2018", "", "isoCountries", "JM", "Jamaica", "" ]
+    }, {
+      "152" : [ "01/01/2018", "", "isoCountries", "JP", "Japan", "" ]
+    }, {
+      "153" : [ "01/01/2018", "", "isoCountries", "JE", "Jersey", "" ]
+    }, {
+      "154" : [ "01/01/2018", "", "isoCountries", "JO", "Jordan", "" ]
+    }, {
+      "155" : [ "01/01/2018", "", "isoCountries", "KZ", "Kazakhstan", "" ]
+    }, {
+      "156" : [ "01/01/2018", "", "isoCountries", "KE", "Kenya", "" ]
+    }, {
+      "157" : [ "01/01/2018", "", "isoCountries", "KI", "Kiribati", "" ]
+    }, {
+      "158" : [ "01/01/2018", "", "isoCountries", "KP", "Korea, Democratic People's Republic of", "" ]
+    }, {
+      "159" : [ "01/01/2018", "", "isoCountries", "KR", "Korea, Republic of", "" ]
+    }, {
+      "160" : [ "01/01/2018", "", "isoCountries", "KW", "Kuwait", "" ]
+    }, {
+      "161" : [ "01/01/2018", "", "isoCountries", "KG", "Kyrgyzstan", "" ]
+    }, {
+      "162" : [ "01/01/2018", "", "isoCountries", "LA", "Lao PDR", "" ]
+    }, {
+      "163" : [ "01/01/2018", "", "isoCountries", "LV", "Latvia", "" ]
+    }, {
+      "164" : [ "01/01/2018", "", "isoCountries", "LB", "Lebanon", "" ]
+    }, {
+      "165" : [ "01/01/2018", "", "isoCountries", "LS", "Lesotho", "" ]
+    }, {
+      "166" : [ "01/01/2018", "", "isoCountries", "LR", "Liberia", "" ]
+    }, {
+      "167" : [ "01/01/2018", "", "isoCountries", "LY", "Libya", "" ]
+    }, {
+      "168" : [ "01/01/2018", "", "isoCountries", "LI", "Liechtenstein", "" ]
+    }, {
+      "169" : [ "01/01/2018", "", "isoCountries", "LT", "Lithuania", "" ]
+    }, {
+      "170" : [ "01/01/2018", "", "isoCountries", "LU", "Luxembourg", "" ]
+    }, {
+      "171" : [ "01/01/2018", "", "isoCountries", "MK", "Macedonia, Republic of", "" ]
+    }, {
+      "172" : [ "01/01/2018", "", "isoCountries", "MG", "Madagascar", "" ]
+    }, {
+      "173" : [ "01/01/2018", "", "isoCountries", "MW", "Malawi", "" ]
+    }, {
+      "174" : [ "01/01/2018", "", "isoCountries", "MY", "Malaysia", "" ]
+    }, {
+      "175" : [ "01/01/2018", "", "isoCountries", "MV", "Maldives", "" ]
+    }, {
+      "176" : [ "01/01/2018", "", "isoCountries", "ML", "Mali", "" ]
+    }, {
+      "177" : [ "01/01/2018", "", "isoCountries", "MT", "Malta", "" ]
+    }, {
+      "178" : [ "01/01/2018", "", "isoCountries", "MH", "Marshall Islands", "" ]
+    }, {
+      "179" : [ "01/01/2018", "", "isoCountries", "MQ", "Martinique", "" ]
+    }, {
+      "180" : [ "01/01/2018", "", "isoCountries", "MR", "Mauritania", "" ]
+    }, {
+      "181" : [ "01/01/2018", "", "isoCountries", "MU", "Mauritius", "" ]
+    }, {
+      "182" : [ "01/01/2018", "", "isoCountries", "YT", "Mayotte", "" ]
+    }, {
+      "183" : [ "01/01/2018", "", "isoCountries", "MX", "Mexico", "" ]
+    }, {
+      "184" : [ "01/01/2018", "", "isoCountries", "FM", "Micronesia, Federated States of", "" ]
+    }, {
+      "185" : [ "01/01/2018", "", "isoCountries", "MD", "Moldova", "" ]
+    }, {
+      "186" : [ "01/01/2018", "", "isoCountries", "MC", "Monaco", "" ]
+    }, {
+      "187" : [ "01/01/2018", "", "isoCountries", "MN", "Mongolia", "" ]
+    }, {
+      "188" : [ "01/01/2018", "", "isoCountries", "ME", "Montenegro", "" ]
+    }, {
+      "189" : [ "01/01/2018", "", "isoCountries", "MS", "Montserrat", "" ]
+    }, {
+      "190" : [ "01/01/2018", "", "isoCountries", "MA", "Morocco", "" ]
+    }, {
+      "191" : [ "01/01/2018", "", "isoCountries", "MZ", "Mozambique", "" ]
+    }, {
+      "192" : [ "01/01/2018", "", "isoCountries", "MM", "Myanmar", "" ]
+    }, {
+      "193" : [ "01/01/2018", "", "isoCountries", "NA", "Namibia", "" ]
+    }, {
+      "194" : [ "01/01/2018", "", "isoCountries", "NR", "Nauru", "" ]
+    }, {
+      "195" : [ "01/01/2018", "", "isoCountries", "NP", "Nepal", "" ]
+    }, {
+      "196" : [ "01/01/2018", "", "isoCountries", "NL", "Netherlands", "" ]
+    }, {
+      "197" : [ "01/01/2018", "", "isoCountries", "AN", "Netherlands Antilles", "" ]
+    }, {
+      "198" : [ "01/01/2018", "", "isoCountries", "NC", "New Caledonia", "" ]
+    }, {
+      "199" : [ "01/01/2018", "", "isoCountries", "NZ", "New Zealand", "" ]
+    }, {
+      "200" : [ "01/01/2018", "", "isoCountries", "NI", "Nicaragua", "" ]
+    }, {
+      "201" : [ "01/01/2018", "", "isoCountries", "NE", "Niger", "" ]
+    }, {
+      "202" : [ "01/01/2018", "", "isoCountries", "NG", "Nigeria", "" ]
+    }, {
+      "203" : [ "01/01/2018", "", "isoCountries", "NU", "Niue", "" ]
+    }, {
+      "204" : [ "01/01/2018", "", "isoCountries", "NF", "Norfolk Island", "" ]
+    }, {
+      "205" : [ "01/01/2018", "", "isoCountries", "MP", "Northern Mariana Islands", "" ]
+    }, {
+      "206" : [ "01/01/2018", "", "isoCountries", "NO", "Norway", "" ]
+    }, {
+      "207" : [ "01/01/2018", "", "isoCountries", "OM", "Oman", "" ]
+    }, {
+      "208" : [ "01/01/2018", "", "isoCountries", "PK", "Pakistan", "" ]
+    }, {
+      "209" : [ "01/01/2018", "", "isoCountries", "PW", "Palau", "" ]
+    }, {
+      "210" : [ "01/01/2018", "", "isoCountries", "PS", "Palestinian Territory, Occupied", "" ]
+    }, {
+      "211" : [ "01/01/2018", "", "isoCountries", "PA", "Panama", "" ]
+    }, {
+      "212" : [ "01/01/2018", "", "isoCountries", "PG", "Papua New Guinea", "" ]
+    }, {
+      "213" : [ "01/01/2018", "", "isoCountries", "PY", "Paraguay", "" ]
+    }, {
+      "214" : [ "01/01/2018", "", "isoCountries", "PE", "Peru", "" ]
+    }, {
+      "215" : [ "01/01/2018", "", "isoCountries", "PH", "Philippines", "" ]
+    }, {
+      "216" : [ "01/01/2018", "", "isoCountries", "PN", "Pitcairn", "" ]
+    }, {
+      "217" : [ "01/01/2018", "", "isoCountries", "PL", "Poland", "" ]
+    }, {
+      "218" : [ "01/01/2018", "", "isoCountries", "PT", "Portugal", "" ]
+    }, {
+      "219" : [ "01/01/2018", "", "isoCountries", "PR", "Puerto Rico", "" ]
+    }, {
+      "220" : [ "01/01/2018", "", "isoCountries", "QA", "Qatar", "" ]
+    }, {
+      "221" : [ "01/01/2018", "", "isoCountries", "RE", "Réunion", "" ]
+    }, {
+      "222" : [ "01/01/2018", "", "isoCountries", "RO", "Romania", "" ]
+    }, {
+      "223" : [ "01/01/2018", "", "isoCountries", "RU", "Russian Federation", "" ]
+    }, {
+      "224" : [ "01/01/2018", "", "isoCountries", "RW", "Rwanda", "" ]
+    }, {
+      "225" : [ "01/01/2018", "", "isoCountries", "BL", "Saint-Barthélemy", "" ]
+    }, {
+      "226" : [ "01/01/2018", "", "isoCountries", "SH", "Saint Helena", "" ]
+    }, {
+      "227" : [ "01/01/2018", "", "isoCountries", "KN", "Saint Kitts and Nevis", "" ]
+    }, {
+      "228" : [ "01/01/2018", "", "isoCountries", "LC", "Saint Lucia", "" ]
+    }, {
+      "229" : [ "01/01/2018", "", "isoCountries", "MF", "Saint-Martin (French part)", "" ]
+    }, {
+      "230" : [ "01/01/2018", "", "isoCountries", "PM", "Saint Pierre and Miquelon", "" ]
+    }, {
+      "231" : [ "01/01/2018", "", "isoCountries", "VC", "Saint Vincent and Grenadines", "" ]
+    }, {
+      "232" : [ "01/01/2018", "", "isoCountries", "WS", "Samoa", "" ]
+    }, {
+      "233" : [ "01/01/2018", "", "isoCountries", "SM", "San Marino", "" ]
+    }, {
+      "234" : [ "01/01/2018", "", "isoCountries", "ST", "Sao Tome and Principe", "" ]
+    }, {
+      "235" : [ "01/01/2018", "", "isoCountries", "SA", "Saudi Arabia", "" ]
+    }, {
+      "236" : [ "01/01/2018", "", "isoCountries", "SN", "Senegal", "" ]
+    }, {
+      "237" : [ "01/01/2018", "", "isoCountries", "RS", "Serbia", "" ]
+    }, {
+      "238" : [ "01/01/2018", "", "isoCountries", "SC", "Seychelles", "" ]
+    }, {
+      "239" : [ "01/01/2018", "", "isoCountries", "SL", "Sierra Leone", "" ]
+    }, {
+      "240" : [ "01/01/2018", "", "isoCountries", "SG", "Singapore", "" ]
+    }, {
+      "241" : [ "01/01/2018", "", "isoCountries", "SX", "Sint Maarten (Dutch part)", "" ]
+    }, {
+      "242" : [ "01/01/2018", "", "isoCountries", "SK", "Slovakia", "" ]
+    }, {
+      "243" : [ "01/01/2018", "", "isoCountries", "SI", "Slovenia", "" ]
+    }, {
+      "244" : [ "01/01/2018", "", "isoCountries", "SB", "Solomon Islands", "" ]
+    }, {
+      "245" : [ "01/01/2018", "", "isoCountries", "SO", "Somalia", "" ]
+    }, {
+      "246" : [ "01/01/2018", "", "isoCountries", "ZA", "South Africa", "" ]
+    }, {
+      "247" : [ "01/01/2018", "", "isoCountries", "GS", "South Georgia and the South Sandwich Islands", "" ]
+    }, {
+      "248" : [ "01/01/2018", "", "isoCountries", "SS", "South Sudan", "" ]
+    }, {
+      "249" : [ "01/01/2018", "", "isoCountries", "ES", "Spain", "" ]
+    }, {
+      "250" : [ "01/01/2018", "", "isoCountries", "LK", "Sri Lanka", "" ]
+    }, {
+      "251" : [ "01/01/2018", "", "isoCountries", "SD", "Sudan", "" ]
+    }, {
+      "252" : [ "01/01/2018", "", "isoCountries", "SR", "Suriname *", "" ]
+    }, {
+      "253" : [ "01/01/2018", "", "isoCountries", "SJ", "Svalbard and Jan Mayen Islands", "" ]
+    }, {
+      "254" : [ "01/01/2018", "", "isoCountries", "SZ", "Swaziland", "" ]
+    }, {
+      "255" : [ "01/01/2018", "", "isoCountries", "SE", "Sweden", "" ]
+    }, {
+      "256" : [ "01/01/2018", "", "isoCountries", "CH", "Switzerland", "" ]
+    }, {
+      "257" : [ "01/01/2018", "", "isoCountries", "SY", "Syrian Arab Republic (Syria)", "" ]
+    }, {
+      "258" : [ "01/01/2018", "", "isoCountries", "TW", "Taiwan", "" ]
+    }, {
+      "259" : [ "01/01/2018", "", "isoCountries", "TJ", "Tajikistan", "" ]
+    }, {
+      "260" : [ "01/01/2018", "", "isoCountries", "TZ", "Tanzania *, United Republic of", "" ]
+    }, {
+      "261" : [ "01/01/2018", "", "isoCountries", "TH", "Thailand", "" ]
+    }, {
+      "262" : [ "01/01/2018", "", "isoCountries", "TL", "Timor-Leste", "" ]
+    }, {
+      "263" : [ "01/01/2018", "", "isoCountries", "TG", "Togo", "" ]
+    }, {
+      "264" : [ "01/01/2018", "", "isoCountries", "TK", "Tokelau", "" ]
+    }, {
+      "265" : [ "01/01/2018", "", "isoCountries", "TO", "Tonga", "" ]
+    }, {
+      "266" : [ "01/01/2018", "", "isoCountries", "TT", "Trinidad and Tobago", "" ]
+    }, {
+      "267" : [ "01/01/2018", "", "isoCountries", "TN", "Tunisia", "" ]
+    }, {
+      "268" : [ "01/01/2018", "", "isoCountries", "TR", "Turkey", "" ]
+    }, {
+      "269" : [ "01/01/2018", "", "isoCountries", "TM", "Turkmenistan", "" ]
+    }, {
+      "270" : [ "01/01/2018", "", "isoCountries", "TC", "Turks and Caicos Islands", "" ]
+    }, {
+      "271" : [ "01/01/2018", "", "isoCountries", "TV", "Tuvalu", "" ]
+    }, {
+      "272" : [ "01/01/2018", "", "isoCountries", "UG", "Uganda", "" ]
+    }, {
+      "273" : [ "01/01/2018", "", "isoCountries", "UA", "Ukraine", "" ]
+    }, {
+      "274" : [ "01/01/2018", "", "isoCountries", "AE", "United Arab Emirates", "" ]
+    }, {
+      "275" : [ "01/01/2018", "", "isoCountries", "GB", "United Kingdom", "" ]
+    }, {
+      "276" : [ "01/01/2018", "", "isoCountries", "US", "United States of America", "" ]
+    }, {
+      "277" : [ "01/01/2018", "", "isoCountries", "UM", "United States Minor Outlying Islands", "" ]
+    }, {
+      "278" : [ "01/01/2018", "", "isoCountries", "UY", "Uruguay", "" ]
+    }, {
+      "279" : [ "01/01/2018", "", "isoCountries", "UZ", "Uzbekistan", "" ]
+    }, {
+      "280" : [ "01/01/2018", "", "isoCountries", "VU", "Vanuatu", "" ]
+    }, {
+      "281" : [ "01/01/2018", "", "isoCountries", "VE", "Venezuela (Bolivarian Republic of)", "" ]
+    }, {
+      "282" : [ "01/01/2018", "", "isoCountries", "VN", "Viet Nam", "" ]
+    }, {
+      "283" : [ "01/01/2018", "", "isoCountries", "VI", "Virgin Islands, US", "" ]
+    }, {
+      "284" : [ "01/01/2018", "", "isoCountries", "WF", "Wallis and Futuna Islands", "" ]
+    }, {
+      "285" : [ "01/01/2018", "", "isoCountries", "EH", "Western Sahara", "" ]
+    }, {
+      "286" : [ "01/01/2018", "", "isoCountries", "YE", "Yemen", "" ]
+    }, {
+      "287" : [ "01/01/2018", "", "isoCountries", "ZM", "Zambia", "" ]
+    }, {
+      "288" : [ "01/01/2018", "", "isoCountries", "ZW", "Zimbabwe", "" ]
+    }, {
+      "289" : [ "01/01/2018", "", "otherAppeals", "Yes", "Yes", "" ]
+    }, {
+      "290" : [ "01/01/2018", "", "otherAppeals", "YesWithoutAppealNumber", "Yes, but I don't have an appeal number", "" ]
+    }, {
+      "291" : [ "01/01/2018", "", "otherAppeals", "No", "No", "" ]
+    }, {
+      "292" : [ "01/01/2018", "", "otherAppeals", "NotSure", "I'm not sure", "" ]
+    }, {
+      "293" : [ "01/01/2018", "", "parties", "legalRepresentative", "Legal representative", "" ]
+    }, {
+      "294" : [ "01/01/2018", "", "parties", "respondent", "Respondent", "" ]
+    }, {
+      "295" : [ "01/01/2018", "", "parties", "both", "Both", "" ]
+    }, {
+      "296" : [ "01/01/2018", "", "isDecisionAllowed", "allowed", "Allowed", "" ]
+    }, {
+      "297" : [ "01/01/2018", "", "isDecisionAllowed", "dismissed", "Dismissed on all grounds", "" ]
+    }, {
+      "298" : [ "01/01/2018", "", "isDocumentSignedToday", "isDocumentSignedToday", "I confirm this document is signed with today's date.", "" ]
+    }, {
+      "299" : [ "01/01/2018", "", "isFeeConsistentWithDecision", "isFeeConsistentWithDecision", "Ensure that the fee award is consistent with your decision.", "" ]
+    } ]
+  },
+  "CaseTypeTab" : {
+    "headers" : [ {
+      "1" : [ "CaseTypeTab", "", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The code of casetype has to be defined in 'CaseType' tab\nMaxLength: 70", "Not used yet - maybe used for roletype type view later\nMaxLength: 40", "Unique Id for tab. MaxLength: 40", "Name to be displayed on the tab\nMaxLengh: 30", "Order of Tab on screen - left to right.\nPositiveInteger", "Unique ID for field - must match an ID on the CaseField tab or be a metadata item. \nMaxLength: 70", "Order of Fields within a tab - top to bottom\nPositiveInteger", "Accepted single or multiple conditions in the format <Field A>=\"Text\"OR<Field B>=<Yes/No>\nMaxLength:1000", "Boolean expression rules for hiding a tab: \nMaxLength:1000", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "Channel", "TabID", "TabLabel", "TabDisplayOrder", "CaseFieldID", "TabFieldDisplayOrder", "FieldShowCondition", "TabShowCondition", "", "", "", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "", "overview", "Overview", "1", "caseBuildingReadyForSubmission", "1", "caseBuildingReadyForSubmission=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "respondentReviewAppealResponseAdded", "2", "caseBuildingReadyForSubmission=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "currentCaseStateVisibleToLegalRepresentative", "3", "caseBuildingReadyForSubmission=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "currentCaseStateVisibleToCaseOfficer", "4", "caseBuildingReadyForSubmission=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "decisionAndReasonsAvailable", "5", "caseBuildingReadyForSubmission=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "submissionOutOfTime", "6", "caseBuildingReadyForSubmission=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_legalRepresentative_appealStarted", "6", "currentCaseStateVisibleToLegalRepresentative=\"appealStarted\"", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_legalRepresentative_appealSubmitted", "7", "currentCaseStateVisibleToLegalRepresentative=\"appealSubmitted\"", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_legalRepresentative_awaitingRespondentEvidence", "8", "currentCaseStateVisibleToLegalRepresentative=\"awaitingRespondentEvidence\"", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_legalRepresentative_caseBuilding", "9", "caseBuildingReadyForSubmission=\"No\"", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_legalRepresentative_caseBuilding_readyForSubmission", "10", "caseBuildingReadyForSubmission=\"Yes\"", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_legalRepresentative_caseUnderReview", "11", "currentCaseStateVisibleToLegalRepresentative=\"caseUnderReview\"", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_legalRepresentative_respondentReview", "12", "currentCaseStateVisibleToLegalRepresentative=\"respondentReview\"", "" ]
+    }, {
+      "17" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_appealSubmitted", "13", "currentCaseStateVisibleToCaseOfficer=\"appealSubmitted\" AND submissionOutOfTime=\"No\"", "" ]
+    }, {
+      "18" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_outOfTime_appealSubmitted", "15", "currentCaseStateVisibleToCaseOfficer=\"appealSubmitted\" AND submissionOutOfTime=\"Yes\"", "" ]
+    }, {
+      "19" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_awaitingRespondentEvidence", "14", "currentCaseStateVisibleToCaseOfficer=\"awaitingRespondentEvidence\"", "" ]
+    }, {
+      "20" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_caseBuilding", "15", "currentCaseStateVisibleToCaseOfficer=\"caseBuilding\"", "" ]
+    }, {
+      "21" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_caseUnderReview", "16", "currentCaseStateVisibleToCaseOfficer=\"caseUnderReview\"", "" ]
+    }, {
+      "22" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_respondentReview", "17", "respondentReviewAppealResponseAdded=\"No\"", "" ]
+    }, {
+      "23" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_respondentReview_appealResponseAvailable", "18", "respondentReviewAppealResponseAdded=\"Yes\"", "" ]
+    }, {
+      "24" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_submitHearingRequirements", "19", "currentCaseStateVisibleToCaseOfficer=\"submitHearingRequirements\"", "" ]
+    }, {
+      "25" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_listing", "20", "currentCaseStateVisibleToCaseOfficer=\"listing\"", "" ]
+    }, {
+      "26" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_prepareForHearing", "21", "currentCaseStateVisibleToCaseOfficer=\"prepareForHearing\"", "" ]
+    }, {
+      "27" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_finalBundling", "22", "currentCaseStateVisibleToCaseOfficer=\"finalBundling\"", "" ]
+    }, {
+      "28" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_preHearing", "22", "currentCaseStateVisibleToCaseOfficer=\"preHearing\"", "" ]
+    }, {
+      "29" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_pre_doc_gen_decision", "23", "decisionAndReasonsAvailable=\"No\"", "" ]
+    }, {
+      "30" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_post_doc_gen_decision", "24", "decisionAndReasonsAvailable=\"Yes\"", "" ]
+    }, {
+      "31" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_caseOfficer_decided", "22", "currentCaseStateVisibleToCaseOfficer=\"decided\"", "" ]
+    }, {
+      "32" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "progress_legalRepresentative_decided", "22", "currentCaseStateVisibleToLegalRepresentative=\"decided\"", "" ]
+    }, {
+      "33" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "hearingDetailsTitle", "25", "listCaseHearingCentre=\"*\"", "" ]
+    }, {
+      "34" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "listCaseHearingCentre", "26", "listCaseHearingCentre=\"*\"", "" ]
+    }, {
+      "35" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "listCaseHearingLength", "27", "listCaseHearingCentre=\"*\"", "" ]
+    }, {
+      "36" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "listCaseHearingDate", "28", "listCaseHearingCentre=\"*\"", "" ]
+    }, {
+      "37" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "caseDetailsTitle", "29", "" ]
+    }, {
+      "38" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "appealReferenceNumber", "30", "" ]
+    }, {
+      "39" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "[CREATED_DATE]", "31", "" ]
+    }, {
+      "40" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "appealType", "32", "" ]
+    }, {
+      "41" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "appellantNameForDisplay", "33", "" ]
+    }, {
+      "42" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "appellantNationalities", "33", "" ]
+    }, {
+      "43" : [ "01/01/2018", "", "Asylum", "", "overview", "", "", "appellantDateOfBirth", "34", "" ]
+    }, {
+      "44" : [ "01/01/2018", "", "Asylum", "", "appeal", "Appeal", "2", "appealResponseAvailable", "1", "appealResponseAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "45" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "caseArgumentAvailable", "2", "caseArgumentAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "46" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "appealTabTitle", "3", "" ]
+    }, {
+      "47" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "appealTabResponseTitle", "4", "appealResponseAvailable=\"Yes\"", "" ]
+    }, {
+      "48" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "appealResponseDocument", "5", "appealResponseAvailable=\"Yes\"", "" ]
+    }, {
+      "49" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "appealResponseDescription", "6", "appealResponseAvailable=\"Yes\"", "" ]
+    }, {
+      "50" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "appealResponseEvidence", "7", "appealResponseAvailable=\"Yes\"", "" ]
+    }, {
+      "51" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "appealTabArgumentTitle", "8", "caseArgumentAvailable=\"Yes\"", "" ]
+    }, {
+      "52" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "caseArgumentDocument", "9", "caseArgumentAvailable=\"Yes\"", "" ]
+    }, {
+      "53" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "caseArgumentDescription", "10", "caseArgumentAvailable=\"Yes\"", "" ]
+    }, {
+      "54" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "caseArgumentEvidence", "11", "caseArgumentAvailable=\"Yes\"", "" ]
+    }, {
+      "55" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "spacer", "12", "" ]
+    }, {
+      "56" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "appealGroundsForDisplay", "13", "" ]
+    }, {
+      "57" : [ "01/01/2018", "", "Asylum", "", "appeal", "", "", "appealType", "14", "" ]
+    }, {
+      "58" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "Case details", "3", "homeOfficeReferenceNumber", "1", "" ]
+    }, {
+      "59" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appealReferenceNumber", "2", "" ]
+    }, {
+      "60" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "homeOfficeDecisionDate", "3", "" ]
+    }, {
+      "61" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "submissionOutOfTime", "4", "" ]
+    }, {
+      "62" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "applicationOutOfTimeExplanation", "5", "" ]
+    }, {
+      "63" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "applicationOutOfTimeDocument", "6", "" ]
+    }, {
+      "64" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantTitle", "7", "" ]
+    }, {
+      "65" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantGivenNames", "8", "" ]
+    }, {
+      "66" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantFamilyName", "9", "" ]
+    }, {
+      "67" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantDateOfBirth", "10", "" ]
+    }, {
+      "68" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantNationalities", "11", "" ]
+    }, {
+      "69" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantHasFixedAddress", "12", "" ]
+    }, {
+      "70" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantAddress", "13", "" ]
+    }, {
+      "71" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appealType", "14", "" ]
+    }, {
+      "72" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "hasNewMatters", "15", "" ]
+    }, {
+      "73" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "newMatters", "16", "" ]
+    }, {
+      "74" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "hasOtherAppeals", "17", "" ]
+    }, {
+      "75" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "otherAppeals", "18", "" ]
+    }, {
+      "76" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "legalRepReferenceNumber", "19", "" ]
+    }, {
+      "77" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appealGroundsProtection", "20", "" ]
+    }, {
+      "78" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appealGroundsHumanRights", "21", "" ]
+    }, {
+      "79" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appealGroundsRevocation", "22", "" ]
+    }, {
+      "80" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "hearingCentre", "23", "" ]
+    }, {
+      "81" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "caseIntroductionDescription", "24", "" ]
+    }, {
+      "82" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantCaseSummaryDescription", "25", "" ]
+    }, {
+      "83" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "immigrationHistoryAgreement", "26", "" ]
+    }, {
+      "84" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "agreedImmigrationHistoryDescription", "27", "" ]
+    }, {
+      "85" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "respondentsImmigrationHistoryDescription", "28", "" ]
+    }, {
+      "86" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "immigrationHistoryDisagreementDescription", "29", "" ]
+    }, {
+      "87" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "scheduleOfIssuesAgreement", "30", "" ]
+    }, {
+      "88" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantsAgreedScheduleOfIssuesDescription", "31", "" ]
+    }, {
+      "89" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "appellantsDisputedScheduleOfIssuesDescription", "32", "" ]
+    }, {
+      "90" : [ "01/01/2018", "", "Asylum", "", "caseDetails", "", "", "scheduleOfIssuesDisagreementDescription", "33", "" ]
+    }, {
+      "91" : [ "01/01/2018", "", "Asylum", "", "documents", "Documents", "4", "documentsTabTitle", "1", "" ]
+    }, {
+      "92" : [ "01/01/2018", "", "Asylum", "", "documents", "", "", "uploadAdditionalEvidenceActionAvailable", "2", "uploadAdditionalEvidenceActionAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "93" : [ "01/01/2018", "", "Asylum", "", "documents", "", "", "uploadAdditionalEvidenceAction", "3", "uploadAdditionalEvidenceActionAvailable=\"Yes\"", "" ]
+    }, {
+      "94" : [ "01/01/2018", "", "Asylum", "", "documents", "", "", "additionalEvidenceDocuments", "4", "" ]
+    }, {
+      "95" : [ "01/01/2018", "", "Asylum", "", "documents", "", "", "hearingDocuments", "5", "" ]
+    }, {
+      "96" : [ "01/01/2018", "", "Asylum", "", "documents", "", "", "legalRepresentativeDocuments", "6", "" ]
+    }, {
+      "97" : [ "01/01/2018", "", "Asylum", "", "documents", "", "", "respondentDocuments", "7", "" ]
+    }, {
+      "98" : [ "01/01/2018", "", "Asylum", "", "documents", "", "", "draftDecisionAndReasonsDocuments", "8", "" ]
+    }, {
+      "99" : [ "01/01/2018", "", "Asylum", "", "documents", "", "", "finalDecisionAndReasonsDocuments", "9", "" ]
+    }, {
+      "100" : [ "01/01/2018", "", "Asylum", "", "directions", "Directions", "5", "directionsTabTitle", "1", "", "" ]
+    }, {
+      "101" : [ "01/01/2018", "", "Asylum", "", "directions", "", "", "changeDirectionDueDateActionAvailable", "2", "changeDirectionDueDateActionAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "102" : [ "01/01/2018", "", "Asylum", "", "directions", "", "", "sendDirectionActionAvailable", "3", "sendDirectionActionAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "" ]
+    }, {
+      "103" : [ "01/01/2018", "", "Asylum", "", "directions", "", "", "sendDirectionAction", "4", "sendDirectionActionAvailable=\"Yes\"", "" ]
+    }, {
+      "104" : [ "01/01/2018", "", "Asylum", "", "directions", "", "", "changeDirectionDueDateAction", "5", "changeDirectionDueDateActionAvailable=\"Yes\"", "" ]
+    }, {
+      "105" : [ "01/01/2018", "", "Asylum", "", "directions", "", "", "directions", "6", "" ]
+    }, {
+      "106" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "107" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "108" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "109" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "110" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "111" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "112" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "113" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "114" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "115" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "116" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "117" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "118" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "119" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "120" : [ "", "", "", "", "", "", "", "", "" ]
+    }, {
+      "121" : [ "", "", "", "", "", "", "", "", "" ]
+    } ]
+  },
+  "State" : {
+    "headers" : [ {
+      "1" : [ "State", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The code of casetype has to be defined in 'CaseType' tab\nMaxLength: 70", "State with ID '*' and Name 'DEFAULT' is a reserved state. The state can be used for events where states do not change.\nMaxLength:70", "This is the name of the state as displayed on UI\nMaxLength:100", "This gives longer decription of the case state\nMax Length: 100", "The order of the states on the screen.\nPositive Integer", "Optional override of title used in the CaseTabView. Markdown , concat supported\nMaxLength: 100", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "ID", "Name", "Description", "DisplayOrder", "TitleDisplay", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "appealStarted", "Appeal started", "Appeal started", "1", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "Asylum", "appealSubmitted", "Appeal submitted", "Appeal submitted", "2", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "Asylum", "awaitingRespondentEvidence", "Awaiting respondent evidence", "Awaiting respondent evidence", "3", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "Asylum", "caseBuilding", "Case building", "Case building", "4", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "Asylum", "caseUnderReview", "Case under review", "Case under review", "5", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "Asylum", "respondentReview", "Respondent review", "Respondent review", "6", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "Asylum", "submitHearingRequirements", "Submit hearing requirements", "Submit hearing requirements", "7", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "Asylum", "listing", "Listing", "Listing", "8", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "Asylum", "prepareForHearing", "Prepare for hearing", "Prepare for hearing", "9", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "Asylum", "finalBundling", "Final bundling", "Final bundling", "10", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "Asylum", "preHearing", "Pre hearing", "Pre hearing", "11", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "Asylum", "decision", "Decision", "Decision", "12", "# ${appealReferenceNumber}", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "Asylum", "decided", "Decided", "Decided", "13", "# ${appealReferenceNumber}", "" ]
+    } ]
+  },
+  "CaseEvent" : {
+    "headers" : [ {
+      "1" : [ "CaseEvent", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The code of casetype has to be defined in 'CaseType' tab\nMaxLength: 70", "Unique ID for the event\nMaxLength: 70", "This is the name of the event as displayed on UI Dropdown list - hence limited to 30\nMaxLength: 30", "This gives further details of an event of a case\nMaxLength:100", "The display order of displaying the events in the list\nPositive Integer", "Future Elements not for MVP (what about multiple state) (semicolon ; seprated list).\nIf '*' is provided, then precondition will not be validated and will be considered as current state\n MaxLength: <unlimited>", "Future Elements not for MVP. \nIf '*' is provided, then the current state will not change and will be same as pre condition state\nMaxLength: 70", "URL to call back to the service for uniqueness. \nMax Length: <unlimited>", "Comma separate timeout (each number is a retry , seconds e.g. 5,10,15 = three retries with increasing timeout time). \nMaxLength: <unlimited>", "URL to call back to the service for uniqueness. \nMax Length: <unlimited>", "Comma separate timeout (each number is a retry , seconds e.g. 5,10,15 = three retries with increasing timeout time). \nMaxLength: <unlimited>", "URL to call back to the service for uniqueness. \nMax Length: <unlimited>", "Comma separate timeout (each number is a retry , seconds e.g. 5,10,15 = three retries with increasing timeout time). \nMaxLength: <unlimited>", "URL to call back to the service for uniqueness. \nMax Length: <unlimited>", "Comma separate timeout (each number is a retry , seconds e.g. 5,10,15 = three retries with increasing timeout time). \nMaxLength: <unlimited>", "It is a mandatory field which can define if the data classification of the field\nMustBe: <Public, Private, Retricted>", "Y, N and empty. TheCheck your answer section will be shown on Y (true) and empty(null) values, but not shown on N (false) values. Fields on CaseEventTo Field tab have Y in \"ShowSummaryChangeOption\" column.\nCouldBe: <Y,N>", "Boolean value to say if the enter summary and event description fields are to be shown\nCouldBeh: <Y,N>", "Boolean value to say if a draft of a create event can be saved\nCouldBe: <Y,N>", "The label of the button on the final event screen - default is Submit\nMaxLength: 200", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "ID", "Name", "Description", "DisplayOrder", "PreConditionState(s)", "PostConditionState", "CallBackURLAboutToStartEvent", "RetriesTimeoutAboutToStartEvent", "CallBackURLMidEvent", "RetriesTimeoutURLMidEvent", "CallBackURLAboutToSubmitEvent", "RetriesTimeoutURLAboutToSubmitEvent", "CallBackURLSubmittedEvent", "RetriesTimeoutURLSubmittedEvent", "SecurityClassification", "ShowSummary", "ShowEventNotes", "CanSaveDraft", "EndButtonLabel", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "startAppeal", "Start your appeal", "Start your appeal", "1", "", "appealStarted", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Save and continue", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "Asylum", "editAppeal", "Edit appeal", "Edit appeal", "2", "appealStarted", "*", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Save and continue", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "Asylum", "submitAppeal", "Submit your appeal", "Submit your appeal", "3", "appealStarted", "appealSubmitted", "http://ia-case-api:8090/asylum/ccdAboutToStart", "5,5,5,5", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "N", "N", "", "Submit", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "Asylum", "sendDirection", "Send direction", "Send direction", "4", "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision", "*", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Send direction", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDate", "Change the direction due date", "Change the direction due date", "5", "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision", "*", "http://ia-case-api:8090/asylum/ccdAboutToStart", "5,5,5,5", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Update direction", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "Asylum", "requestRespondentEvidence", "Request respondent evidence", "Request respondent evidence", "6", "appealSubmitted;", "awaitingRespondentEvidence", "http://ia-case-api:8090/asylum/ccdAboutToStart", "5,5,5,5", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Send direction", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "Asylum", "uploadRespondentEvidence", "Upload respondent evidence", "Upload respondent evidence", "7", "awaitingRespondentEvidence", "caseBuilding", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Upload", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "Asylum", "buildCase", "Build your case", "Build your case", "8", "awaitingRespondentEvidence;caseBuilding", "*", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Upload", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "Asylum", "submitCase", "Submit your case", "Submit your case", "9", "caseBuilding", "caseUnderReview", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "N", "N", "", "Submit", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "Asylum", "requestCaseEdit", "Request case edit", "Request case edit", "10", "caseUnderReview", "caseBuilding", "http://ia-case-api:8090/asylum/ccdAboutToStart", "5,5,5,5", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Send direction", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "Asylum", "requestRespondentReview", "Request respondent review", "Request respondent review", "11", "caseUnderReview", "respondentReview", "http://ia-case-api:8090/asylum/ccdAboutToStart", "5,5,5,5", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Send direction", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "Asylum", "addAppealResponse", "Add appeal response", "Add appeal response", "12", "respondentReview", "*", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Upload", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "Asylum", "requestHearingRequirements", "Request hearing requirements", "Request hearing requirements", "13", "respondentReview", "listing", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "N", "N", "", "Send direction", "" ]
+    }, {
+      "17" : [ "01/01/2018", "", "Asylum", "uploadAdditionalEvidence", "Upload additional evidence", "Upload additional evidence", "14", "caseUnderReview;respondentReview;submitHearingRequirements;listing", "*", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Upload", "" ]
+    }, {
+      "18" : [ "01/01/2018", "", "Asylum", "listCase", "List the case", "List the case", "15", "listing", "prepareForHearing", "http://ia-case-api:8090/asylum/ccdAboutToStart", "5,5,5,5", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "List case", "" ]
+    }, {
+      "19" : [ "01/01/2018", "", "Asylum", "createCaseSummary", "Create case summary", "Create case summary", "16", "prepareForHearing", "finalBundling", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Upload", "" ]
+    }, {
+      "20" : [ "01/01/2018", "", "Asylum", "revertStateToAwaitingRespondentEvidence", "Add additional evidence", "Add additional evidence", "17", "caseBuilding", "awaitingRespondentEvidence", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "", "", "Public", "N", "N", "", "Continue", "" ]
+    }, {
+      "21" : [ "01/01/2018", "", "Asylum", "generateHearingBundle", "Generate hearing bundle", "Generate hearing bundle", "18", "finalBundling", "preHearing", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "N", "N", "", "Generate", "" ]
+    }, {
+      "22" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "Start decision and reasons", "Start decision and reasons", "19", "preHearing", "decision", "http://ia-case-api:8090/asylum/ccdAboutToStart", "5,5,5,5", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Save", "" ]
+    }, {
+      "23" : [ "01/01/2018", "", "Asylum", "generateDecisionAndReasons", "Generate decision and reasons", "Generate decision and reasons", "20", "decision", "*", "", "", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Generate", "" ]
+    }, {
+      "24" : [ "01/01/2018", "", "Asylum", "sendDecisionAndReasons", "Complete decision and reasons", "Complete decision and reasons", "21", "decision", "decided", "http://ia-case-api:8090/asylum/ccdAboutToStart", "5,5,5,5", "", "", "http://ia-case-api:8090/asylum/ccdAboutToSubmit", "5,5,5,5", "http://ia-case-api:8090/asylum/ccdSubmitted", "5,5,5,5", "Public", "Y", "N", "", "Upload", "" ]
+    } ]
+  },
+  "AuthorisationCaseEvent" : {
+    "headers" : [ {
+      "1" : [ "AuthorisationCaseEvent", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "Must match ID in 'CaseType' tab\nMaxLength: 70", "Must match ID on Event tabe.\nMaxLength: 40", "Must match ID role.  If a role doesn’t have a Row below that mean no access to.\nMaxLength: 100.", "C - Create, R - Read, U - Update, D - Delete\nMustBe1OrManyOf: <C,R,U,D>", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "CaseEventID", "UserRole", "CRUD", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "startAppeal", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "Asylum", "editAppeal", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "Asylum", "submitAppeal", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "Asylum", "sendDirection", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDate", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "Asylum", "requestRespondentEvidence", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "Asylum", "uploadRespondentEvidence", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "Asylum", "buildCase", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "Asylum", "submitCase", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "Asylum", "requestCaseEdit", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "Asylum", "requestRespondentReview", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "Asylum", "addAppealResponse", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "Asylum", "requestHearingRequirements", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "17" : [ "01/01/2018", "", "Asylum", "uploadAdditionalEvidence", "caseworker-ia-legalrep-solicitor", "CRUD", "" ]
+    }, {
+      "18" : [ "01/01/2018", "", "Asylum", "listCase", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "19" : [ "01/01/2018", "", "Asylum", "createCaseSummary", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "20" : [ "01/01/2018", "", "Asylum", "revertStateToAwaitingRespondentEvidence", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "21" : [ "01/01/2018", "", "Asylum", "generateHearingBundle", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "22" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "23" : [ "01/01/2018", "", "Asylum", "generateDecisionAndReasons", "caseworker-ia-caseofficer", "CRUD", "" ]
+    }, {
+      "24" : [ "01/01/2018", "", "Asylum", "sendDecisionAndReasons", "caseworker-ia-caseofficer", "CRUD", "" ]
+    } ]
+  },
+  "CaseEventToFields" : {
+    "headers" : [ {
+      "1" : [ "CaseEventToFields", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The code of casetype has to be defined in 'CaseType' tab\nMaxLength: 70", "Unique ID for the event. Not listing an case event means that All Fields are displayed. MaxLength: 70", "This defines with Fields can be changed / viewed during an case event. MaxLength: 70", "", "The order of the fields on the screen.\nPositive Integer", "Accepted Values:  for mandatory, readonly and optional data on UI\nMustBe: MANDATORY, READONLY, OPTIONAL", "This is a string value which defines the Wizard pages' ID\nMaxLength:40", "This is a string value which defines the Wizard pages' Label\nMaxLength:40", "The order to display the pages\nPositive Integer", "Currently blank 1 or 2.  2 currently will display the yellow review column.\nPositive Integer", "Accepted single or multiple conditions in the format <Field A>=\"Text\"OR<Field B>=<Yes/No>\nMaxLength: 1000", "Boolean expression rules for hiding a page: MaxLength:1000", "States a field should appear on check your answers However these fields will be considered only \"ShowSummary\" column in CaseEvent tab is set to Y\nCouldBe: <Y,N>", "States a field should appear on check your answers However these fields will be considered only \"ShowSummary\" column in CaseEvent tab is set to Y\nCouldBe: <Y,N>", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "CaseEventID", "CaseFieldID", "CaseEventFieldLabel", "PageFieldDisplayOrder", "DisplayContext", "PageID", "PageLabel", "PageDisplayOrder", "PageColumnNumber", "FieldShowCondition", "PageShowCondition", "ShowSummaryChangeOption", "ShowSummaryContentOption", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "startAppeal", "checklistTitle", "", "1", "READONLY", "checklist", "", "1", "", "", "", "N", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "Asylum", "startAppeal", "checklist", "", "2", "MANDATORY", "checklist", "", "", "", "", "", "N", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "Asylum", "startAppeal", "homeOfficeDecisionTitle", "", "1", "READONLY", "homeOfficeDecision", "", "2", "", "", "", "N", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "Asylum", "startAppeal", "homeOfficeReferenceNumber", "", "2", "MANDATORY", "homeOfficeDecision", "", "", "", "", "", "Y", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "Asylum", "startAppeal", "homeOfficeDecisionDate", "", "3", "MANDATORY", "homeOfficeDecision", "", "", "", "", "", "Y", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantBasicDetailsTitle", "", "1", "READONLY", "appellantBasicDetails", "", "3", "", "", "", "N", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantTitle", "", "2", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantGivenNames", "", "3", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantFamilyName", "", "4", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantDateOfBirth", "", "5", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantNationalities", "Nationality", "6", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantAddressTitle", "", "1", "READONLY", "appellantAddress", "", "4", "", "", "", "N", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantHasFixedAddress", "", "2", "MANDATORY", "appellantAddress", "", "", "", "", "", "Y", "" ]
+    }, {
+      "17" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantHasFixedAddressLabel", "", "3", "READONLY", "appellantAddress", "", "", "", "appellantHasFixedAddress=\"No\"", "", "N", "" ]
+    }, {
+      "18" : [ "01/01/2018", "", "Asylum", "startAppeal", "appellantAddress", "", "4", "MANDATORY", "appellantAddress", "", "", "", "appellantHasFixedAddress=\"Yes\"", "", "Y", "" ]
+    }, {
+      "19" : [ "01/01/2018", "", "Asylum", "startAppeal", "appealTypeTitle", "", "1", "READONLY", "appealType", "", "5", "", "", "", "N", "" ]
+    }, {
+      "20" : [ "01/01/2018", "", "Asylum", "startAppeal", "appealType", "Decision type", "2", "MANDATORY", "appealType", "", "", "", "", "", "Y", "" ]
+    }, {
+      "21" : [ "01/01/2018", "", "Asylum", "startAppeal", "appealGroundsProtectionTitle", "", "1", "READONLY", "appealGroundsProtection", "", "6", "", "", "appealType=\"protection\"", "N", "" ]
+    }, {
+      "22" : [ "01/01/2018", "", "Asylum", "startAppeal", "appealGroundsProtection", "Select at least one of the two options below", "2", "MANDATORY", "appealGroundsProtection", "", "", "", "", "", "Y", "" ]
+    }, {
+      "23" : [ "01/01/2018", "", "Asylum", "startAppeal", "appealGroundsHumanRights", "Check the box if the following statement is also true", "3", "OPTIONAL", "appealGroundsProtection", "", "", "", "", "", "Y", "" ]
+    }, {
+      "24" : [ "01/01/2018", "", "Asylum", "startAppeal", "appealGroundsRevocationTitle", "", "1", "READONLY", "appealGroundsRevocation", "", "7", "", "", "appealType=\"revocationOfProtection\"", "N", "" ]
+    }, {
+      "25" : [ "01/01/2018", "", "Asylum", "startAppeal", "appealGroundsRevocation", "Select at least one of the two options below", "2", "MANDATORY", "appealGroundsRevocation", "", "", "", "", "", "Y", "" ]
+    }, {
+      "26" : [ "01/01/2018", "", "Asylum", "startAppeal", "newMattersTitle", "", "1", "READONLY", "newMatters", "", "8", "", "", "", "N", "" ]
+    }, {
+      "27" : [ "01/01/2018", "", "Asylum", "startAppeal", "hasNewMatters", "", "2", "MANDATORY", "newMatters", "", "", "", "", "", "Y", "" ]
+    }, {
+      "28" : [ "01/01/2018", "", "Asylum", "startAppeal", "newMatters", "", "3", "MANDATORY", "newMatters", "", "", "", "hasNewMatters=\"Yes\"", "", "Y", "" ]
+    }, {
+      "29" : [ "01/01/2018", "", "Asylum", "startAppeal", "hasOtherAppealsTitle", "", "1", "READONLY", "hasOtherAppeals", "", "9", "", "", "", "N", "" ]
+    }, {
+      "30" : [ "01/01/2018", "", "Asylum", "startAppeal", "hasOtherAppeals", "", "2", "MANDATORY", "hasOtherAppeals", "", "", "", "", "", "Y", "" ]
+    }, {
+      "31" : [ "01/01/2018", "", "Asylum", "startAppeal", "otherAppealsTitle", "", "1", "READONLY", "otherAppeals", "", "10", "", "", "hasOtherAppeals=\"Yes\"", "N", "" ]
+    }, {
+      "32" : [ "01/01/2018", "", "Asylum", "startAppeal", "otherAppeals", "", "2", "MANDATORY", "otherAppeals", "", "", "", "", "", "Y", "" ]
+    }, {
+      "33" : [ "01/01/2018", "", "Asylum", "startAppeal", "legalRepReferenceNumberTitle", "", "3", "READONLY", "referenceNumberPage", "", "11", "", "", "", "N", "" ]
+    }, {
+      "34" : [ "01/01/2018", "", "Asylum", "startAppeal", "legalRepReferenceNumber", "", "4", "OPTIONAL", "referenceNumberPage", "", "", "", "", "", "Y", "" ]
+    }, {
+      "35" : [ "01/01/2018", "", "Asylum", "editAppeal", "homeOfficeDecisionTitle", "", "1", "READONLY", "homeOfficeDecision", "", "2", "", "", "", "N", "" ]
+    }, {
+      "36" : [ "01/01/2018", "", "Asylum", "editAppeal", "homeOfficeReferenceNumber", "", "2", "MANDATORY", "homeOfficeDecision", "", "", "", "", "", "Y", "" ]
+    }, {
+      "37" : [ "01/01/2018", "", "Asylum", "editAppeal", "homeOfficeDecisionDate", "", "3", "MANDATORY", "homeOfficeDecision", "", "", "", "", "", "Y", "" ]
+    }, {
+      "38" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantBasicDetailsTitle", "", "1", "READONLY", "appellantBasicDetails", "", "3", "", "", "", "N", "" ]
+    }, {
+      "39" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantTitle", "", "2", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "40" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantGivenNames", "", "3", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "41" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantFamilyName", "", "4", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "42" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantDateOfBirth", "", "5", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "43" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantNationalities", "Nationality", "6", "MANDATORY", "appellantBasicDetails", "", "", "", "", "", "Y", "" ]
+    }, {
+      "44" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantAddressTitle", "", "1", "READONLY", "appellantAddress", "", "4", "", "", "", "N", "" ]
+    }, {
+      "45" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantHasFixedAddress", "", "2", "MANDATORY", "appellantAddress", "", "", "", "", "", "Y", "" ]
+    }, {
+      "46" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantHasFixedAddressLabel", "", "3", "READONLY", "appellantAddress", "", "", "", "appellantHasFixedAddress=\"No\"", "", "N", "" ]
+    }, {
+      "47" : [ "01/01/2018", "", "Asylum", "editAppeal", "appellantAddress", "", "4", "MANDATORY", "appellantAddress", "", "", "", "appellantHasFixedAddress=\"Yes\"", "", "Y", "" ]
+    }, {
+      "48" : [ "01/01/2018", "", "Asylum", "editAppeal", "appealTypeTitle", "", "1", "READONLY", "appealType", "", "5", "", "", "", "N", "" ]
+    }, {
+      "49" : [ "01/01/2018", "", "Asylum", "editAppeal", "appealType", "Decision type", "2", "MANDATORY", "appealType", "", "", "", "", "", "Y", "" ]
+    }, {
+      "50" : [ "01/01/2018", "", "Asylum", "editAppeal", "appealGroundsProtectionTitle", "", "1", "READONLY", "appealGroundsProtection", "", "6", "", "", "appealType=\"protection\"", "N", "" ]
+    }, {
+      "51" : [ "01/01/2018", "", "Asylum", "editAppeal", "appealGroundsProtection", "Select at least one of the two options below", "2", "MANDATORY", "appealGroundsProtection", "", "", "", "", "", "Y", "" ]
+    }, {
+      "52" : [ "01/01/2018", "", "Asylum", "editAppeal", "appealGroundsHumanRights", "Check the box if the following statement is also true", "3", "OPTIONAL", "appealGroundsProtection", "", "", "", "", "", "Y", "" ]
+    }, {
+      "53" : [ "01/01/2018", "", "Asylum", "editAppeal", "appealGroundsRevocationTitle", "", "1", "READONLY", "appealGroundsRevocation", "", "7", "", "", "appealType=\"revocationOfProtection\"", "N", "" ]
+    }, {
+      "54" : [ "01/01/2018", "", "Asylum", "editAppeal", "appealGroundsRevocation", "Select at least one of the two options below", "2", "MANDATORY", "appealGroundsRevocation", "", "", "", "", "", "Y", "" ]
+    }, {
+      "55" : [ "01/01/2018", "", "Asylum", "editAppeal", "newMattersTitle", "", "1", "READONLY", "newMatters", "", "8", "", "", "", "N", "" ]
+    }, {
+      "56" : [ "01/01/2018", "", "Asylum", "editAppeal", "hasNewMatters", "", "2", "MANDATORY", "newMatters", "", "", "", "", "", "Y", "" ]
+    }, {
+      "57" : [ "01/01/2018", "", "Asylum", "editAppeal", "newMatters", "", "3", "MANDATORY", "newMatters", "", "", "", "hasNewMatters=\"Yes\"", "", "Y", "" ]
+    }, {
+      "58" : [ "01/01/2018", "", "Asylum", "editAppeal", "hasOtherAppealsTitle", "", "1", "READONLY", "hasOtherAppeals", "", "9", "", "", "", "N", "" ]
+    }, {
+      "59" : [ "01/01/2018", "", "Asylum", "editAppeal", "hasOtherAppeals", "", "2", "MANDATORY", "hasOtherAppeals", "", "", "", "", "", "Y", "" ]
+    }, {
+      "60" : [ "01/01/2018", "", "Asylum", "editAppeal", "otherAppealsTitle", "", "1", "READONLY", "otherAppeals", "", "10", "", "", "hasOtherAppeals=\"Yes\"", "N", "" ]
+    }, {
+      "61" : [ "01/01/2018", "", "Asylum", "editAppeal", "otherAppeals", "", "2", "MANDATORY", "otherAppeals", "", "", "", "", "", "Y", "" ]
+    }, {
+      "62" : [ "01/01/2018", "", "Asylum", "editAppeal", "legalRepReferenceNumberTitle", "", "3", "READONLY", "referenceNumberPage", "", "11", "", "", "", "N", "" ]
+    }, {
+      "63" : [ "01/01/2018", "", "Asylum", "editAppeal", "legalRepReferenceNumber", "", "4", "OPTIONAL", "referenceNumberPage", "", "", "", "", "", "Y", "" ]
+    }, {
+      "64" : [ "01/01/2018", "", "Asylum", "submitAppeal", "submissionOutOfTime", "", "1", "MANDATORY", "submissionOutOfTimePage", "", "1", "", "applicationOutOfTimeText=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "submissionOutOfTime=\"Yes\"", "N", "" ]
+    }, {
+      "65" : [ "01/01/2018", "", "Asylum", "submitAppeal", "applicationOutOfTimeText", "You've missed the deadline for appealing.\n\nYou can ask for permission to appeal outside of the deadline.\n\nExplain why you believe your late appeal should be allowed to proceed.", "2", "READONLY", "submissionOutOfTimePage", "", "", "", "", "", "N", "" ]
+    }, {
+      "66" : [ "01/01/2018", "", "Asylum", "submitAppeal", "applicationOutOfTimeExplanation", "You can upload a document or fill out the box below.", "3", "OPTIONAL", "submissionOutOfTimePage", "", "", "", "", "", "N", "" ]
+    }, {
+      "67" : [ "01/01/2018", "", "Asylum", "submitAppeal", "applicationOutOfTimeDocument", " ", "4", "OPTIONAL", "submissionOutOfTimePage", "", "", "", "", "", "N", "" ]
+    }, {
+      "68" : [ "01/01/2018", "", "Asylum", "submitAppeal", "legalRepDeclaration", "", "1", "MANDATORY", "declaration", "", "2", "", "", "", "N", "" ]
+    }, {
+      "69" : [ "01/01/2018", "", "Asylum", "sendDirection", "sendDirectionExplanation", "", "1", "MANDATORY", "sendDirection", "", "1", "", "", "", "Y", "" ]
+    }, {
+      "70" : [ "01/01/2018", "", "Asylum", "sendDirection", "sendDirectionParties", "", "2", "MANDATORY", "sendDirection", "", "", "", "", "", "Y", "" ]
+    }, {
+      "71" : [ "01/01/2018", "", "Asylum", "sendDirection", "sendDirectionDateDue", "", "3", "MANDATORY", "sendDirection", "", "", "", "", "", "Y", "" ]
+    }, {
+      "72" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDate", "changeDirectionDueDateTitle", "", "1", "READONLY", "changeDirectionDueDate", "", "1", "", "", "", "N", "" ]
+    }, {
+      "73" : [ "01/01/2018", "", "Asylum", "changeDirectionDueDate", "editableDirections", "", "2", "MANDATORY", "changeDirectionDueDate", "", "", "", "", "", "Y", "" ]
+    }, {
+      "74" : [ "01/01/2018", "", "Asylum", "requestRespondentEvidence", "requestRespondentEvidenceTitle", "", "1", "READONLY", "requestRespondentEvidence", "", "1", "", "", "", "N", "" ]
+    }, {
+      "75" : [ "01/01/2018", "", "Asylum", "requestRespondentEvidence", "sendDirectionExplanation", "", "2", "MANDATORY", "requestRespondentEvidence", "", "", "", "", "", "Y", "" ]
+    }, {
+      "76" : [ "01/01/2018", "", "Asylum", "requestRespondentEvidence", "sendDirectionParties", "", "3", "READONLY", "requestRespondentEvidence", "", "", "", "", "", "Y", "", "" ]
+    }, {
+      "77" : [ "01/01/2018", "", "Asylum", "requestRespondentEvidence", "sendDirectionDateDue", "", "4", "MANDATORY", "requestRespondentEvidence", "", "", "", "", "", "Y", "" ]
+    }, {
+      "78" : [ "01/01/2018", "", "Asylum", "uploadRespondentEvidence", "uploadRespondentEvidenceTitle", "", "1", "READONLY", "uploadRespondentEvidence", "", "1", "", "", "", "N", "" ]
+    }, {
+      "79" : [ "01/01/2018", "", "Asylum", "uploadRespondentEvidence", "respondentEvidence", "", "2", "MANDATORY", "uploadRespondentEvidence", "", "", "", "", "", "Y", "" ]
+    }, {
+      "80" : [ "01/01/2018", "", "Asylum", "buildCase", "buildCaseTitle", "", "1", "READONLY", "buildCase", "", "1", "", "", "", "N", "" ]
+    }, {
+      "81" : [ "01/01/2018", "", "Asylum", "buildCase", "caseArgumentDocument", "", "2", "MANDATORY", "buildCase", "", "", "", "", "", "Y", "" ]
+    }, {
+      "82" : [ "01/01/2018", "", "Asylum", "buildCase", "caseArgumentDescription", "Describe the document", "3", "OPTIONAL", "buildCase", "", "", "", "", "", "Y", "" ]
+    }, {
+      "83" : [ "01/01/2018", "", "Asylum", "buildCase", "buildCaseEvidenceTitle", "", "4", "READONLY", "buildCase", "", "", "", "", "", "N", "" ]
+    }, {
+      "84" : [ "01/01/2018", "", "Asylum", "buildCase", "caseArgumentEvidence", "", "5", "OPTIONAL", "buildCase", "", "", "", "", "", "Y", "" ]
+    }, {
+      "85" : [ "01/01/2018", "", "Asylum", "requestCaseEdit", "sendDirectionExplanation", "", "1", "MANDATORY", "requestCaseEdit", "", "1", "", "", "", "Y", "" ]
+    }, {
+      "86" : [ "01/01/2018", "", "Asylum", "requestCaseEdit", "sendDirectionParties", "", "2", "READONLY", "requestCaseEdit", "", "", "", "", "", "Y", "", "" ]
+    }, {
+      "87" : [ "01/01/2018", "", "Asylum", "requestCaseEdit", "sendDirectionDateDue", "", "3", "MANDATORY", "requestCaseEdit", "", "", "", "", "", "Y", "" ]
+    }, {
+      "88" : [ "01/01/2018", "", "Asylum", "requestRespondentReview", "requestRespondentReviewTitle", "", "1", "READONLY", "requestRespondentReview", "", "1", "", "", "", "N", "" ]
+    }, {
+      "89" : [ "01/01/2018", "", "Asylum", "requestRespondentReview", "sendDirectionExplanation", "", "2", "MANDATORY", "requestRespondentReview", "", "", "", "", "", "Y", "" ]
+    }, {
+      "90" : [ "01/01/2018", "", "Asylum", "requestRespondentReview", "sendDirectionParties", "", "3", "READONLY", "requestRespondentReview", "", "", "", "", "", "Y", "", "" ]
+    }, {
+      "91" : [ "01/01/2018", "", "Asylum", "requestRespondentReview", "sendDirectionDateDue", "", "4", "MANDATORY", "requestRespondentReview", "", "", "", "", "", "Y", "" ]
+    }, {
+      "92" : [ "01/01/2018", "", "Asylum", "addAppealResponse", "addAppealResponseTitle", "", "1", "READONLY", "addAppealResponse", "", "1", "", "", "", "N", "" ]
+    }, {
+      "93" : [ "01/01/2018", "", "Asylum", "addAppealResponse", "appealResponseDocument", "", "2", "MANDATORY", "addAppealResponse", "", "", "", "", "", "Y", "" ]
+    }, {
+      "94" : [ "01/01/2018", "", "Asylum", "addAppealResponse", "appealResponseDescription", "Describe the document", "3", "OPTIONAL", "addAppealResponse", "", "", "", "", "", "Y", "" ]
+    }, {
+      "95" : [ "01/01/2018", "", "Asylum", "addAppealResponse", "appealResponseEvidence", "", "4", "OPTIONAL", "addAppealResponse", "", "", "", "", "", "Y", "" ]
+    }, {
+      "96" : [ "01/01/2018", "", "Asylum", "uploadAdditionalEvidence", "additionalEvidenceTitle", "", "1", "READONLY", "uploadAdditionalEvidence", "", "1", "", "", "", "N", "" ]
+    }, {
+      "97" : [ "01/01/2018", "", "Asylum", "uploadAdditionalEvidence", "additionalEvidence", "", "2", "MANDATORY", "uploadAdditionalEvidence", "", "", "", "", "", "Y", "" ]
+    }, {
+      "98" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseHearingTitle", "", "1", "READONLY", "listCaseHearing", "", "1", "", "", "", "N", "" ]
+    }, {
+      "99" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseHearingCentre", "", "2", "MANDATORY", "listCaseHearing", "", "", "", "", "", "Y", "" ]
+    }, {
+      "100" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseHearingLength", "", "3", "MANDATORY", "listCaseHearing", "", "", "", "", "", "Y", "" ]
+    }, {
+      "101" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseHearingDate", "", "4", "MANDATORY", "listCaseHearing", "", "", "", "", "", "Y", "" ]
+    }, {
+      "102" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseRequirementsTitle", "", "1", "READONLY", "listCaseRequirements", "", "2", "", "", "", "N", "" ]
+    }, {
+      "103" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseRequirementsVulnerabilities", "", "2", "OPTIONAL", "listCaseRequirements", "", "", "", "", "", "Y", "" ]
+    }, {
+      "104" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseRequirementsMultimedia", "", "3", "OPTIONAL", "listCaseRequirements", "", "", "", "", "", "Y", "" ]
+    }, {
+      "105" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseRequirementsSingleSexCourt", "", "4", "OPTIONAL", "listCaseRequirements", "", "", "", "", "", "Y", "" ]
+    }, {
+      "106" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseRequirementsInCameraCourt", "", "5", "OPTIONAL", "listCaseRequirements", "", "", "", "", "", "Y", "" ]
+    }, {
+      "107" : [ "01/01/2018", "", "Asylum", "listCase", "listCaseRequirementsOther", "", "6", "OPTIONAL", "listCaseRequirements", "", "", "", "", "", "Y", "" ]
+    }, {
+      "108" : [ "01/01/2018", "", "Asylum", "createCaseSummary", "caseSummaryDocumentTitle", "", "1", "READONLY", "createCaseSummary", "", "1", "", "", "", "N", "" ]
+    }, {
+      "109" : [ "01/01/2018", "", "Asylum", "createCaseSummary", "caseSummaryDocument", "", "2", "MANDATORY", "createCaseSummary", "", "", "", "", "", "Y", "" ]
+    }, {
+      "110" : [ "01/01/2018", "", "Asylum", "createCaseSummary", "caseSummaryDescription", "Describe the document", "3", "OPTIONAL", "createCaseSummary", "", "", "", "", "", "Y", "" ]
+    }, {
+      "111" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "caseIntroductionTitle", "", "1", "READONLY", "caseIntroduction", "", "1", "", "", "", "N", "" ]
+    }, {
+      "112" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "caseIntroductionDescription", "", "2", "OPTIONAL", "caseIntroduction", "", "", "", "", "", "Y", "" ]
+    }, {
+      "113" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "appellantCaseSummaryTitle", "", "1", "READONLY", "appellantSummary", "", "2", "", "", "", "N", "" ]
+    }, {
+      "114" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "appellantCaseSummaryDescription", "", "2", "OPTIONAL", "appellantSummary", "", "", "", "", "", "Y", "" ]
+    }, {
+      "115" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "immigrationHistoryAgreement", "", "1", "MANDATORY", "immigrationHistory", "", "3", "", "", "", "Y", "" ]
+    }, {
+      "116" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "agreedImmigrationHistoryDescription", "", "2", "OPTIONAL", "immigrationHistory", "", "", "", "immigrationHistoryAgreement=\"Yes\"", "", "Y", "" ]
+    }, {
+      "117" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "immigrationDisagreementInstructionsLabel", "", "3", "READONLY", "immigrationHistory", "", "", "", "immigrationHistoryAgreement=\"No\"", "", "N", "" ]
+    }, {
+      "118" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "respondentsImmigrationHistoryDescription", "", "4", "OPTIONAL", "immigrationHistory", "", "", "", "immigrationHistoryAgreement=\"No\"", "", "Y", "" ]
+    }, {
+      "119" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "immigrationHistoryDisagreementDescription", "", "5", "OPTIONAL", "immigrationHistory", "", "", "", "immigrationHistoryAgreement=\"No\"", "", "Y", "" ]
+    }, {
+      "120" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "scheduleOfIssuesAgreement", "", "1", "MANDATORY", "scheduleOfIssues", "", "4", "", "", "", "Y", "" ]
+    }, {
+      "121" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "scheduleOfIssuesAgreementInstructionsLabel", "", "2", "READONLY", "scheduleOfIssues", "", "", "", "scheduleOfIssuesAgreement=\"Yes\"", "", "N", "" ]
+    }, {
+      "122" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "appellantsAgreedScheduleOfIssuesDescription", "", "3", "OPTIONAL", "scheduleOfIssues", "", "", "", "scheduleOfIssuesAgreement=\"Yes\"", "", "Y", "" ]
+    }, {
+      "123" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "scheduleOfIssuesDisagreementInstructionsLabel", "", "4", "READONLY", "scheduleOfIssues", "", "", "", "scheduleOfIssuesAgreement=\"No\"", "", "N", "" ]
+    }, {
+      "124" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "appellantsDisputedScheduleOfIssuesDescription", "", "5", "OPTIONAL", "scheduleOfIssues", "", "", "", "scheduleOfIssuesAgreement=\"No\"", "", "Y", "" ]
+    }, {
+      "125" : [ "01/01/2018", "", "Asylum", "decisionAndReasonsStarted", "scheduleOfIssuesDisagreementDescription", "", "6", "OPTIONAL", "scheduleOfIssues", "", "", "", "scheduleOfIssuesAgreement=\"No\"", "", "Y", "" ]
+    }, {
+      "126" : [ "01/01/2018", "", "Asylum", "generateDecisionAndReasons", "anonymityOrderLabel", "", "1", "READONLY", "anonymityOrder", "", "1", "", "", "", "Y", "" ]
+    }, {
+      "127" : [ "01/01/2018", "", "Asylum", "generateDecisionAndReasons", "anonymityOrder", "", "2", "MANDATORY", "anonymityOrder", "", "", "", "", "", "Y", "" ]
+    }, {
+      "128" : [ "01/01/2018", "", "Asylum", "generateDecisionAndReasons", "legalRepresentativeNamesLabel", "", "1", "READONLY", "legalRepresentatives", "", "", "", "", "", "Y", "" ]
+    }, {
+      "129" : [ "01/01/2018", "", "Asylum", "generateDecisionAndReasons", "appellantRepresentative", "", "2", "MANDATORY", "legalRepresentatives", "", "", "", "", "", "Y", "" ]
+    }, {
+      "130" : [ "01/01/2018", "", "Asylum", "generateDecisionAndReasons", "respondentRepresentative", "", "3", "MANDATORY", "legalRepresentatives", "", "", "", "", "", "Y", "" ]
+    }, {
+      "131" : [ "01/01/2018", "", "Asylum", "sendDecisionAndReasons", "isDecisionAllowedTitle", "", "1", "READONLY", "sendDecisionAndReasons", "", "1", "", "", "", "N", "" ]
+    }, {
+      "132" : [ "01/01/2018", "", "Asylum", "sendDecisionAndReasons", "isDecisionAllowed", "", "2", "MANDATORY", "sendDecisionAndReasons", "", "", "", "", "", "Y", "" ]
+    }, {
+      "133" : [ "01/01/2018", "", "Asylum", "sendDecisionAndReasons", "uploadDecisionAndReasonsTitle", "", "1", "READONLY", "uploadDecisionAndReasons", "", "2", "", "", "", "N", "" ]
+    }, {
+      "134" : [ "01/01/2018", "", "Asylum", "sendDecisionAndReasons", "finalDecisionAndReasonsDocument", "", "2", "MANDATORY", "uploadDecisionAndReasons", "", "", "", "", "", "Y", "" ]
+    }, {
+      "135" : [ "01/01/2018", "", "Asylum", "sendDecisionAndReasons", "decisionAndReasonsDeclarationLabel", "", "3", "READONLY", "uploadDecisionAndReasons", "", "", "", "", "", "N", "" ]
+    }, {
+      "136" : [ "01/01/2018", "", "Asylum", "sendDecisionAndReasons", "isDocumentSignedToday", "", "4", "MANDATORY", "uploadDecisionAndReasons", "", "", "", "", "", "N", "" ]
+    }, {
+      "137" : [ "01/01/2018", "", "Asylum", "sendDecisionAndReasons", "isFeeConsistentWithDecision", "", "5", "MANDATORY", "uploadDecisionAndReasons", "", "", "", "", "", "N", "" ]
+    } ]
+  },
+  "SearchInputFields" : {
+    "headers" : [ {
+      "1" : [ "SearchInputFields", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "", "", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The code of casetype has to be defined in 'CaseType' tab\nMaxLength: 70", "Fields that can be searched on. MaxLength: 70", "Label next to search field on UI.\nMaxLength: 200", "Order of fields on UI \nPositive Integer", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "CaseFieldID", "Label", "DisplayOrder", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2017", "", "Asylum", "hearingCentre", "Hearing centre Search", "1", "" ]
+    }, {
+      "5" : [ "01/01/2017", "", "Asylum", "appealReferenceNumber", "Reference number", "2", "" ]
+    }, {
+      "6" : [ "01/01/2017", "", "Asylum", "[CREATED_DATE]", "Appeal start date", "3", "" ]
+    }, {
+      "7" : [ "01/01/2017", "", "Asylum", "appellantNameForDisplay", "Appellant name", "4", "" ]
+    } ]
+  },
+  "SearchResultFields" : {
+    "headers" : [ {
+      "1" : [ "SearchResultFields", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The code of casetype has to be defined in 'CaseType' tab\nMaxLength: 70", "Fields to be displayed in results list. MaxLength: 70", "Name on the results column.for the field\nMaxLength: 200", "Order the columns are displayed.\nPositive Integer", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "CaseFieldID", "Label", "DisplayOrder", "", "", "", "", "", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2017", "", "Asylum", "appealReferenceNumber", "Reference number", "1", "" ]
+    }, {
+      "5" : [ "01/01/2017", "", "Asylum", "appellantNameForDisplay", "Appellant name", "2", "" ]
+    }, {
+      "6" : [ "01/01/2017", "", "Asylum", "[STATE]", "Status", "3", "" ]
+    }, {
+      "7" : [ "01/01/2017", "", "Asylum", "[CREATED_DATE]", "Appeal start date", "4", "" ]
+    }, {
+      "8" : [ ]
+    }, {
+      "9" : [ ]
+    } ]
+  },
+  "WorkBasketInputFields" : {
+    "headers" : [ {
+      "1" : [ "WorkBasketInputFields", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "", "", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The code of casetype has to be defined in 'CaseType' tab\nMaxLength: 70", "Fields that can be searched on. MaxLength: 70", "Label next to search field on UI.\nMaxLength: 200", "Order of fields on UI \nPositive Integer", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "CaseFieldID", "Label", "DisplayOrder", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2017", "", "Asylum", "hearingCentre", "Hearing centre", "1", "" ]
+    }, {
+      "5" : [ "01/01/2017", "", "Asylum", "appealReferenceNumber", "Reference number", "2", "" ]
+    }, {
+      "6" : [ "01/01/2017", "", "Asylum", "[CREATED_DATE]", "Appeal start date", "3", "" ]
+    }, {
+      "7" : [ "01/01/2017", "", "Asylum", "appellantNameForDisplay", "Appellant name", "4", "" ]
+    }, {
+      "8" : [ "", "", "", "", "", "", "" ]
+    } ]
+  },
+  "WorkBasketResultFields" : {
+    "headers" : [ {
+      "1" : [ "WorkBasketResultFields", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "The code of casetype has to be defined in 'CaseType' tab\nMaxLength: 70", "Fields to be displayed in results list. MaxLength: 70", "Name on the results column.for the field\nMaxLength: 200", "Order the columns are displayed.\nPositive Integer", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "CaseFieldID", "Label", "DisplayOrder", "", "", "", "", "", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2017", "", "Asylum", "appealReferenceNumber", "Reference number", "1", "" ]
+    }, {
+      "5" : [ "01/01/2017", "", "Asylum", "appellantNameForDisplay", "Appellant name", "2", "" ]
+    }, {
+      "6" : [ "01/01/2017", "", "Asylum", "[STATE]", "Status", "3", "" ]
+    }, {
+      "7" : [ "01/01/2017", "", "Asylum", "[CREATED_DATE]", "Appeal start date", "4", "" ]
+    } ]
+  },
+  "UserProfile" : {
+    "headers" : [ {
+      "1" : [ "UserProfile", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "", "Must match ID from Jurisdiction Tab\nMaxLength: 70", "Must match ID from CaseType Tab\nMaxLength: 70", "Must match ID from State Tab\nMaxLength: 70", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "UserIDAMId", "WorkBasketDefaultJurisdiction", "WorkBasketDefaultCaseType", "WorkBasketDefaultState", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "ia-caseofficer@fake.hmcts.net", "IA", "Asylum", "appealSubmitted", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "ia-judiciary@fake.hmcts.net", "IA", "Asylum", "appealStarted", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "ia-law-firm-a@fake.hmcts.net", "IA", "Asylum", "appealStarted", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "ia-law-firm-b@fake.hmcts.net", "IA", "Asylum", "appealStarted", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "ia-system-user@fake.hmcts.net", "IA", "Asylum", "appealSubmitted", "" ]
+    } ]
+  },
+  "AuthorisationCaseType" : {
+    "headers" : [ {
+      "1" : [ "AuthorisationCaseType", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "Must match ID in 'CaseType' tab\nMaxLength: 70", "Must match ID role.  If a role doesn’t have a Row below that mean no access to.\nMaxLength: 100.", "C - Create, R - Read, U - Update, D - Delete\nMustBe1OrManyOf: <C,R,U,D>", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "UserRole", "CRUD", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "Asylum", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "Asylum", "caseworker-ia-system", "R", "" ]
+    }, {
+      "7" : [ ]
+    } ]
+  },
+  "AuthorisationCaseState" : {
+    "headers" : [ {
+      "1" : [ "AuthorisationCaseState", "PrimaryKeyInRed", "PrimaryAndForeignKey Orange", "ForeignKey Brown", "" ]
+    } ],
+    "comments" : [ {
+      "2" : [ "Start date from which the data will be valid", "End date until which the data will be valid", "Must match ID on 'CaseType' tab\nMaxLength: 70", "Muust match an ID on State tab.\nMaxLength: 40", "Must match ID role.  If a role doesn’t have a Row below that mean no access to.\nMaxLength: 100.", "C - Create, R - Read, U - Update, D - Delete\nMustBe1OrManyOf: <C,R,U,D>", "", "", "", "", "", "" ]
+    } ],
+    "colNames" : [ {
+      "3" : [ "LiveFrom", "LiveTo", "CaseTypeID", "CaseStateID", "UserRole", "CRUD", "" ]
+    } ],
+    "rows" : [ {
+      "4" : [ "01/01/2018", "", "Asylum", "appealStarted", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "5" : [ "01/01/2018", "", "Asylum", "appealSubmitted", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "6" : [ "01/01/2018", "", "Asylum", "appealSubmitted", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "7" : [ "01/01/2018", "", "Asylum", "appealSubmitted", "caseworker-ia-system", "R", "" ]
+    }, {
+      "8" : [ "01/01/2018", "", "Asylum", "awaitingRespondentEvidence", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "9" : [ "01/01/2018", "", "Asylum", "awaitingRespondentEvidence", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "10" : [ "01/01/2018", "", "Asylum", "awaitingRespondentEvidence", "caseworker-ia-system", "R", "" ]
+    }, {
+      "11" : [ "01/01/2018", "", "Asylum", "caseBuilding", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "12" : [ "01/01/2018", "", "Asylum", "caseBuilding", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "13" : [ "01/01/2018", "", "Asylum", "caseBuilding", "caseworker-ia-system", "R", "" ]
+    }, {
+      "14" : [ "01/01/2018", "", "Asylum", "caseUnderReview", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "15" : [ "01/01/2018", "", "Asylum", "caseUnderReview", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "16" : [ "01/01/2018", "", "Asylum", "caseUnderReview", "caseworker-ia-system", "R", "" ]
+    }, {
+      "17" : [ "01/01/2018", "", "Asylum", "respondentReview", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "18" : [ "01/01/2018", "", "Asylum", "respondentReview", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "19" : [ "01/01/2018", "", "Asylum", "respondentReview", "caseworker-ia-system", "R", "" ]
+    }, {
+      "20" : [ "01/01/2018", "", "Asylum", "submitHearingRequirements", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "21" : [ "01/01/2018", "", "Asylum", "submitHearingRequirements", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "22" : [ "01/01/2018", "", "Asylum", "submitHearingRequirements", "caseworker-ia-system", "R", "" ]
+    }, {
+      "23" : [ "01/01/2018", "", "Asylum", "listing", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "24" : [ "01/01/2018", "", "Asylum", "listing", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "25" : [ "01/01/2018", "", "Asylum", "listing", "caseworker-ia-system", "R", "" ]
+    }, {
+      "26" : [ "01/01/2018", "", "Asylum", "prepareForHearing", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "27" : [ "01/01/2018", "", "Asylum", "prepareForHearing", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "28" : [ "01/01/2018", "", "Asylum", "prepareForHearing", "caseworker-ia-system", "R", "" ]
+    }, {
+      "29" : [ "01/01/2018", "", "Asylum", "finalBundling", "caseworker-ia-legalrep-solicitor", "CRU", "" ]
+    }, {
+      "30" : [ "01/01/2018", "", "Asylum", "finalBundling", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "31" : [ "01/01/2018", "", "Asylum", "finalBundling", "caseworker-ia-system", "R", "" ]
+    }, {
+      "32" : [ "01/01/2018", "", "Asylum", "preHearing", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "33" : [ "01/01/2018", "", "Asylum", "preHearing", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "34" : [ "01/01/2018", "", "Asylum", "preHearing", "caseworker-ia-system", "R", "" ]
+    }, {
+      "35" : [ "01/01/2018", "", "Asylum", "decision", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "36" : [ "01/01/2018", "", "Asylum", "decision", "caseworker-ia-caseofficer", "CRU", "" ]
+    }, {
+      "37" : [ "01/01/2018", "", "Asylum", "decision", "caseworker-ia-system", "R", "" ]
+    }, {
+      "38" : [ "01/01/2018", "", "Asylum", "decided", "caseworker-ia-legalrep-solicitor", "R", "" ]
+    }, {
+      "39" : [ "01/01/2018", "", "Asylum", "decided", "caseworker-ia-caseofficer", "R", "" ]
+    }, {
+      "40" : [ "01/01/2018", "", "Asylum", "decided", "caseworker-ia-system", "R", "" ]
+    } ]
+  }
+}
