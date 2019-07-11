@@ -1,0 +1,20 @@
+Added:
+{
+  "CaseField" : {
+    "71" : "01/01/2018, , Asylum, caseArgumentDocumentRequiredLabel, #### You must upload your appeal skeleton argument to submit your case, , Label, , , PUBLIC, "
+  },
+  "CaseType" : {
+    "4" : "01/01/2018, , Asylum, IA Asylum Case 0.62, Asylum Case, IA, , , PUBLIC, "
+  },
+  "CaseEventToFields" : {
+    "85" : "01/01/2018, , Asylum, buildCase, caseArgumentAvailable, , 6, MANDATORY, buildCase, , , , caseArgumentDocumentRequiredLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\", , N, ",
+    "86" : "01/01/2018, , Asylum, buildCase, caseArgumentDocumentRequiredLabel, , 7, READONLY, buildCase, , , , caseArgumentAvailable=\"\", , N, "
+  }
+}
+
+Removed:
+{
+  "CaseType" : {
+    "4" : "01/01/2018, , Asylum, IA Asylum Case 0.61, Asylum Case, IA, , , PUBLIC, "
+  }
+}
