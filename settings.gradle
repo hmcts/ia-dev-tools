@@ -1,3 +1,4 @@
 rootProject.name = 'ia-dev-tools'
 include 'ccd-converter'
+include 'ia-prd-wiremock-transformer'
 
