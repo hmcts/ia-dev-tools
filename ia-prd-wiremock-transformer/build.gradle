@@ -11,15 +11,16 @@ targetCompatibility = 1.8
 
 dependencies {
 
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile group: 'com.github.tomakehurst', name: 'wiremock', version: '2.23.2'
 
 }
 
 task fatJar(type: Jar) {
     manifest {
-        attributes 'Main-Class': 'com.brad.ExampleTransformer'
+        attributes 'Main-Class': 'uk.gov.hmcts.reform.iadevtools.wiremock.WiremockResponseTransformer'
     }
-    baseName = 'wiremock-transformer'
+    baseName = 'ia-wiremock-transformer'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
